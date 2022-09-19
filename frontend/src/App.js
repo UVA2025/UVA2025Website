@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './Components/HelloWorld';
+import ToDoList from './Components/ToDoList';
 
 function App() {
   const pi = 3.14;
@@ -8,10 +9,11 @@ function App() {
   return (
     <div>
       <h1>UVA 2025</h1>
-      <HelloWorld display={x}/>
+      {/* <HelloWorld display={x}/>
       <HelloWorld display={pi}/>
       <HelloWorld display={"2025"}/>
-      <HelloWorld display={"Go Hoos"}/>
+      <HelloWorld display={"Go Hoos"}/> */}
+      <ToDoList/>
     </div>
   );
 }
