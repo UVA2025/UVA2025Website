@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import HelloWorld from './Components/HelloWorld';
+import {Route, Routes} from 'react-router-dom'
+import Error from './Components/Error';
+import Login from './Components/HomePage/Login';
+import List from './Components/ListPage/List';
 
 function App() {
-  const pi = 3.14;
-  let x = "Maryland";
   return (
-    <div>
-      <h1>UVA 2025</h1>
-      <HelloWorld display={x}/>
-      <HelloWorld display={pi}/>
-      <HelloWorld display={"2025"}/>
-      <HelloWorld display={"Go Hoos"}/>
-    </div>
+    <>
+    <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route path="/list" element={<List/>}/>
+      <Route path="*" element={<Error />}/>
+    </Routes>
+    </>
   );
 }
 
