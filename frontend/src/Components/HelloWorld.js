@@ -1,7 +1,10 @@
 const HelloWorld = (props) => {
 
     return (
-        <h1>{props.display}</h1>
+        <div>
+            <h1>hello world!</h1>
+            <a href="localhost:3000/hello"><button> localhost:3000/hello</button></a>
+        </div>
     );
 };
 

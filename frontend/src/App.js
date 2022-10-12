@@ -2,18 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './Components/HelloWorld';
 import ToDoList from './Components/ToDoList';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const pi = 3.14;
   let x = "Maryland";
   return (
     <div>
-      <h1>UVA 2025</h1>
-      {/* <HelloWorld display={x}/>
-      <HelloWorld display={pi}/>
-      <HelloWorld display={"2025"}/>
-      <HelloWorld display={"Go Hoos"}/> */}
-      <ToDoList/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HelloWorld/>}></Route>
+          <Route path="/hello" element={<ToDoList/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
