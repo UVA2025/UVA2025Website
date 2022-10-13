@@ -8,9 +8,6 @@ const ToDoList = (props) => {
     function addTodo() {
         todos.push(message);
 
-        // for (let i=0; i < todos.length; i++){
-        //     console.log("message: " + todos.at(i));
-        // }
     }
 
     const handleMessageChange = (event) => {
@@ -21,7 +18,6 @@ const ToDoList = (props) => {
     return (
         <div>
             <textarea
-                // value={message}
                 onChange={handleMessageChange}
             />
             <button onClick={addTodo}>

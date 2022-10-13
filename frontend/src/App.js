@@ -1,18 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './Components/HelloWorld';
-import ToDoList from './Components/ToDoList';
+import HelloWorld from './Components/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import UVAPage from './Components/UVA2025';
 
 function App() {
-  const pi = 3.14;
-  let x = "Maryland";
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HelloWorld/>}></Route>
-          <Route path="/hello" element={<ToDoList/>}></Route>
+          <Route path="/uva" element={<UVAPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
