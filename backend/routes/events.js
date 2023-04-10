@@ -4,8 +4,11 @@ const client = require('../services/contentfulClient').client;
 
 router.get('/', function(req, res, next) {
   client.getEntries()
-    .then((response) => res.send(response.items))
-    .catch(console.error);
+    .then(response => res.send(response.items))
+    .catch(err => {
+      console.log(err);
+      next();
+    });
 });
 
 module.exports = router;
