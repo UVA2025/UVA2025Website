@@ -1,4 +1,5 @@
 const contentful = require('contentful');
+require('dotenv').config();
 
 const client = contentful.createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
