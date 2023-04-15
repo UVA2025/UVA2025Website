@@ -3,8 +3,6 @@ import { AppBar, Box, Toolbar, Button } from '@mui/material';
 import WelcomeText from './Components/WelcomeText';
 
 function App() {
-  const pi = 3.14;
-  let x = "Maryland";
   return (
     <div>
       <Navbar />
