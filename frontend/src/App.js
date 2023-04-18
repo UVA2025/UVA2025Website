@@ -1,17 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import HelloWorld from './Components/HelloWorld';
+import Navbar from './Components/Navbar';
+import { AppBar, Box, Toolbar, Button } from '@mui/material';
+import WelcomeText from './Components/WelcomeText';
 
 function App() {
-  const pi = 3.14;
-  let x = "Maryland";
   return (
     <div>
-      <h1>UVA 2025</h1>
-      <HelloWorld display={x}/>
-      <HelloWorld display={pi}/>
-      <HelloWorld display={"2025"}/>
-      <HelloWorld display={"Go Hoos"}/>
+      <Navbar />
+      <WelcomeText display={"WELCOME TO THE UVA CLASS OF 2025 WEBSITE"}/>
     </div>
   );
 }
