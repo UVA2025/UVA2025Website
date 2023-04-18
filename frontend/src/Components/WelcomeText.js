@@ -15,7 +15,7 @@ const WelcomeText = (props) => {
 
     return (
         <div>
-            <Grid container spacing={1}>
+            <Grid container spacing={5}>
                 <Grid item xs={1} md={0}>
 
                 </Grid>
@@ -23,6 +23,25 @@ const WelcomeText = (props) => {
                     wrap="nowrap" // --> add this line to disable wrap
                     sx={{ overflow: "auto" }}>
                     <img src={require('../images/SYC_Photo.jpg')} height={800} width={1465} className="front-page-image" alt="logo" />
+                </Grid>
+                <Grid item xs={1} md={1}>
+                </Grid>
+                <Grid item xs={1} md={1}>
+                </Grid>
+                <Grid item xs={5} md={5}>
+                    <Box
+                        display="flex"
+                        sx={{ justifyContent: "center" }}      >
+                        <div><Typography variant="h3" gutterBottom>
+                            WHO WE ARE
+                        </Typography>
+                        </div>
+
+                        <Typography><p>Input text for the about us section</p></Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={5} md={5}>
+                <img src={require('../images/uva2025.png')} height={500} class='float-left' />
                 </Grid>
                 <Grid item xs={1} md={1}>
                 </Grid>
