@@ -3,45 +3,26 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
 const WelcomeText = (props) => {
 
     return (
         <div>
             <Grid container spacing={5}>
-                <Grid item xs={1} md={0}>
-
-                </Grid>
-                <Grid item xs={10} md={10} container
+                <Grid item xs={12} md={12} lg={12} container
                     wrap="nowrap" // --> add this line to disable wrap
                     sx={{ overflow: "auto" }}>
-                    <img src={require('../images/SYC_Photo.jpg')} height={800} width={1465} className="front-page-image" alt="logo" />
-                </Grid>
-                <Grid item xs={1} md={1}>
+                    <div>
+                        <img src={require('../images/SYC_Photo.jpg')} height={800} width={1465} className="front-page-image" alt="logo" />
+                    </div>
                 </Grid>
                 <Grid item xs={1} md={1}>
                 </Grid>
                 <Grid item xs={5} md={5}>
                     <Box
-                        display="flex"
+                        display="in-line"
                         sx={{ justifyContent: "center" }}      >
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <div><h1>Who we are</h1>
-                            </div>
-                        </Grid>
-
-                        <div>
-                            <p>example input text</p>
-                        </div>
-
-                        {/* <Typography><p>Input text for the about us section</p></Typography> */}
+                        <Typography><h1 style={{ textAlign: "right" }}>WHO WE ARE</h1></Typography>
+                        <Typography><p style={{ textAlign: "right" }}>This is the example text for the Second Year Council (soon to be Third Year Council)</p></Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={5} md={5}>
