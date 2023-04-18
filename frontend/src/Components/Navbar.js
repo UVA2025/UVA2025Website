@@ -12,8 +12,8 @@ const theme = createTheme({
         secondary: {
             main: '#FFFFFF',
         },
-    },  
-    button:{
+    },
+    button: {
         fontWeight: "bold",
     },
     spacing: 4,
@@ -25,7 +25,8 @@ const Navbar = () => {
             <Box sx={{ flexgrow: 1 }}>
                 <AppBar position="static">
                     <ThemeProvider theme={theme}>
-                        <Toolbar style={{ backgroundColor: "#26365A" }} sx={{justifyContent: "center"}} >
+                        <Toolbar style={{ backgroundColor: "#26365A" }} sx={{ justifyContent: "center" }} >
+                            <img src={require('../images/uva2025.png')} height={50} class='float-left' />
                             <Button variant="text" color="secondary">HOME</Button>
                             <Button variant="text" color="secondary">EVENTS</Button>
                             <Button variant="text" color="secondary">RESOURCES</Button>
