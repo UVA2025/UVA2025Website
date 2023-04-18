@@ -32,16 +32,20 @@ const WelcomeText = (props) => {
                     <Box
                         display="flex"
                         sx={{ justifyContent: "center" }}      >
-                        <div><Typography variant="h3" gutterBottom>
-                            WHO WE ARE
-                        </Typography>
+                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                            <div><h1>Who we are</h1>
+                            </div>
+                        </Grid>
+
+                        <div>
+                            <p>example input text</p>
                         </div>
 
-                        <Typography><p>Input text for the about us section</p></Typography>
+                        {/* <Typography><p>Input text for the about us section</p></Typography> */}
                     </Box>
                 </Grid>
                 <Grid item xs={5} md={5}>
-                <img src={require('../images/uva2025.png')} height={500} class='float-left' />
+                    <img src={require('../images/uva2025.png')} height={500} class='float-left' />
                 </Grid>
                 <Grid item xs={1} md={1}>
                 </Grid>
