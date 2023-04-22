@@ -28,22 +28,30 @@ const Navbar = () => {
                     <ThemeProvider theme={theme}>
                         <Toolbar style={{ backgroundColor: "#26365A" }} sx={{ justifyContent: "center" }} >
                             <img src={require('../images/uva2025.png')} height={50} class='float-left' />
-                            <Button variant="text" color="secondary" onclick="">
-                                <Link to="/" style={{textDecoration: "none", color: "white" }}>HOME</Link>
-                            </Button>
-                            <Button variant="text" color="secondary">
-                                <Link to="/events" style={{textDecoration: "none", color: "white" }}>EVENTS</Link>
-                            </Button>
-                            <Button variant="text" color="secondary">
-                                <Link to="/resources"  style={{textDecoration: "none", color: "white" }}>
+
+                            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                                <Button variant="text" color="secondary" onclick="">
+                                    HOME
+                                </Button>
+                            </Link>
+
+                            <Link to="/events" style={{ textDecoration: "none", color: "white" }}>
+                                <Button variant="text" color="secondary" onclick="/events">
+                                    EVENTS
+                                </Button>
+                            </Link>
+
+                            <Link to="/resources" style={{ textDecoration: "none", color: "white" }}>
+                                <Button variant="text" color="secondary" onclick="/resources">
                                     RESOURCES
-                                </Link>
-                            </Button>
-                            <Button variant="text" color="secondary">
-                                <Link to="/about"  style={{textDecoration: "none", color: "white" }}>
-                                    ABOUT US
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
+
+                            <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
+                                <Button variant="text" color="secondary" onclick="/about">
+                                    ABOUT
+                                </Button>
+                            </Link>
                         </Toolbar>
                     </ThemeProvider>
                 </AppBar>
