@@ -1,8 +1,34 @@
-const About =()=>{
+export const About = () => {
     return (
-        <>
-        This is about us page
-        </>
+        <div>
+             <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        <div>
+            THIS IS THE ABOUT US PAGE.
+        </div>
+        </div>
     )
 
 }

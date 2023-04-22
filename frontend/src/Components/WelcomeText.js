@@ -2,6 +2,7 @@ import { AppBar, Box, Container, Grid, Toolbar, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import SYCBackgroundImage from '../images/SYC_Photo.jpg';
 
 const WelcomeText = (props) => {
 
@@ -11,8 +12,31 @@ const WelcomeText = (props) => {
                 <Grid item xs={12} md={12} lg={12} container
                     wrap="nowrap" // --> add this line to disable wrap
                     sx={{ overflow: "auto" }}>
-                    <div>
-                        <img src={require('../images/SYC_Photo.jpg')} height={800} width={1465} className="front-page-image" alt="logo" />
+
+                    <div
+                        style={{
+                            backgroundImage: `url(${SYCBackgroundImage})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center center',
+                            backgroundRepeat: 'no-repeat',
+                            width: '100vw',
+                            height: '60vh',
+                        }}
+                        className="front-page-image"
+                    >
+                        <div
+                            style={{
+                                textAlign: "center",
+                                color: "White"
+                            }}
+                            className="front-page-image">
+                            <Typography>
+                                <h1>
+                                    {props.display}
+                                </h1>
+                            </Typography>
+                        </div>
+                        {/* Your content goes here */}
                     </div>
                 </Grid>
                 <Grid item xs={1} md={1}>
@@ -32,11 +56,11 @@ const WelcomeText = (props) => {
                 </Grid>
             </Grid>
 
-            <Box
+            {/* <Box
                 display="flex"
                 sx={{ justifyContent: "center" }}      >
                 <Typography><h1>{props.display}</h1></Typography>
-            </Box>
+            </Box> */}
         </div>
 
     );
