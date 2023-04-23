@@ -29,7 +29,7 @@ const Events = () => {
                 <h2>{month}</h2>
                 <ul>
                     {filteredEventItems.map((event, eventIndex) => (
-                        <li key={eventIndex}>
+                        <li key={eventIndex} style={{listStyle: "none"}}>
                             <EventCard eventName={event} />
                         </li>
                     ))}
