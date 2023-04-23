@@ -39,9 +39,9 @@ const Homepage = () => {
                         {/* Your content goes here */}
                     </div>
                 </Grid>
-                <Grid item xs={1} sm={1} md={1}>
+                <Grid item xs={1} sm={2} md={2}>
                 </Grid>
-                <Grid item xs={10} sm={5} md={5} justifyContent="center">
+                <Grid item xs={10} sm={4} md={4} justifyContent="center">
                     <Box
                         display="in-line"
                         sx={{ justifyContent: "center" }}      >
@@ -49,10 +49,10 @@ const Homepage = () => {
                         <Typography><p style={{ textAlign: "right" }}>This is the example text for the Second Year Council (soon to be Third Year Council)</p></Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={10} sm={5} md={5} justifyContent="center">
+                <Grid item xs={10} sm={4} md={4} justifyContent="center">
                     <img src={require('../images/uva2025.png')} height={500} style={{ maxWidth: "100%", height: "auto" }} />
                 </Grid>
-                <Grid item xs={1} sm={1} md={1}>
+                <Grid item xs={1} sm={2} md={2}>
                 </Grid>
             </Grid>
         </div>

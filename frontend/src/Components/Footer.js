@@ -30,7 +30,7 @@ const Footer = () => {
             <Box>
                 <Container>
 
-                    <Row>
+                    <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
                         <Column>
                         <img src={require('../images/footericon.jpg')} height={100} width={100} alt="Logo" />
                         </Column>
@@ -46,7 +46,7 @@ const Footer = () => {
                                     </span>
                                 </i>
                             </FooterLink>
-                            <FooterLink href="#">
+                            <FooterLink href="https://www.instagram.com/classof2025uva/?hl=en" target="_blank">
                                 <i className="fab fa-instagram">
                                     <span style={{ marginLeft: "10px" }}>
                                         Instagram
@@ -56,14 +56,15 @@ const Footer = () => {
                             <FooterLink href="#">
                                 <i className="fab fa-youtube">
                                     <span style={{ marginLeft: "10px" }}>
-                                        Youtube
+                                        YouTube
                                     </span>
                                 </i>
                             </FooterLink>
                         </Column>
                         <Column style={{ color: "white" }}>
-                            <b>Contact the President:</b> presidentemail@virginia.edu
-                            <b>Contact the Vice-President:</b> vpemail@virginia.edu
+                            <span style={{marginBottom: "1em"}}><b>James Edwards, President:</b> jyq2ey@virginia.edu</span>
+                            <br></br>
+                            <span> <b>Liv Schortmann, Vice President:</b> kba3bw@virginia.edu</span>
                         </Column>
                     </Row>
                 </Container>
