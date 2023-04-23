@@ -15,7 +15,7 @@ const Events = () => {
         return new Date(year, month).toLocaleString('en-US', { month: 'long' }).toLocaleUpperCase();
     });
 
-    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary"];
+    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary", "SoccerJuly"];
 
     const listItems = months.map((month, index) => {
         const filteredEventItems = eventItems.filter((event) => {
@@ -68,9 +68,9 @@ const Events = () => {
             </div>
             <Container>
                 <Typography>
-                    <h1 style={{ listStyle: "none", color: "#26365A" }}>
+                    <h2 style={{ listStyle: "none", color: "#26365A" }}>
                         {listItems}
-                    </h1>
+                    </h2>
                 </Typography>
                 <EventCard />
             </Container>
