@@ -32,7 +32,9 @@ const Footer = () => {
 
                     <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
                         <Column>
-                        <img src={require('../images/footericon.jpg')} height={100} width={100} alt="Logo" />
+                            <FooterLink href="https://alumni.virginia.edu" target="_blank">
+                                <img src={require('../images/footericon.jpg')} height={100} width={100} alt="Logo" />
+                            </FooterLink>
                         </Column>
                         <Column>
                             <FooterLink href="#">Meet the Team</FooterLink>
@@ -62,9 +64,15 @@ const Footer = () => {
                             </FooterLink>
                         </Column>
                         <Column style={{ color: "white" }}>
-                            <span style={{marginBottom: "1em"}}><b>James Edwards, President:</b> jyq2ey@virginia.edu</span>
+                            <span style={{ marginBottom: "1em" }}>
+                                <b>James Edwards, President:</b>
+                                <a href="mailto:jyq2ey@virginia.edu" style={{ color: "white" }}>jyq2ey@virginia.edu</a>
+                            </span>
                             <br></br>
-                            <span> <b>Liv Schortmann, Vice President:</b> kba3bw@virginia.edu</span>
+                            <span>
+                                <b>Liv Schortmann, Vice President:</b>
+                                <a href="mailto:kba3bw@virginia.edu" style={{ color: "white" }}>kba3bw@virginia.edu</a>
+                            </span>
                         </Column>
                     </Row>
                 </Container>

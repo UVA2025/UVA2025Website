@@ -1,7 +1,4 @@
-import WelcomeText from "./WelcomeText"
-import { AppBar, Box, Container, Grid, Toolbar, Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+import { Box, Container, Grid, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SYCBackgroundImage from '../images/SYC_Photo.jpg';
 

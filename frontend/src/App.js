@@ -1,6 +1,4 @@
 import Navbar from './Components/Navbar';
-import { AppBar, Box, Toolbar, Button } from '@mui/material';
-import WelcomeText from './Components/WelcomeText';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './Components/Homepage'
 import Events from './Components/Events'
