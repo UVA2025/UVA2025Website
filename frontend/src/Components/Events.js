@@ -17,27 +17,25 @@ const Events = () => {
 
     const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary"];
 
-    // const listItems = months.map((month, index) => (
-    //     <li key={index}>
-    //         <h2>{month}</h2>
-    //         <ul>
-    //             {eventItems.map((event, eventIndex) => (
-    //                 <li key={eventIndex}>
-    //                     <EventCard eventName={event} />
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     </li>
-    // ));
-
     const listItems = months.map((month, index) => {
         const filteredEventItems = eventItems.filter((event) => {
-            if (month.length < 7) {
-                return event.includes("Series");
-            } else {
-                return event.includes("Basketball");
-            }
-        })
+            console.log("event", event);
+            console.log("month", month);
+            return event.toLocaleUpperCase().includes(month);
+        });
+
+        return (
+            <li key={index}>
+                <h2>{month}</h2>
+                <ul>
+                    {filteredEventItems.map((event, eventIndex) => (
+                        <li key={eventIndex}>
+                            <EventCard eventName={event} />
+                        </li>
+                    ))}
+                </ul>
+            </li>
+        );
     });
 
 
@@ -70,16 +68,9 @@ const Events = () => {
             </div>
             <Container>
                 <Typography>
-                    <li key={index}>
-                        <h2>{month}</h2>
-                        <ul>
-                            {filteredEventItems.map((event, eventIndex) => (
-                                <li key={eventIndex}>
-                                    <EventItem eventName={event} />
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
+                    <h1 style={{ listStyle: "none", color: "#26365A" }}>
+                        {listItems}
+                    </h1>
                 </Typography>
                 <EventCard />
             </Container>
