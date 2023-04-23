@@ -2,8 +2,30 @@ import Typography from '@mui/material/Typography';
 import { Container } from '@mui/system';
 import Rotunda from '../images/Rotunda.jpeg';
 import EventCard from './EventCard';
+import React, { useEffect, useState } from 'react';
 
 const Events = () => {
+    const [events, setEvents] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const fetchEventData = () => {
+        fetch("http://localhost:9000/api/v1/events")
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                setEvents(data);
+                setIsLoading(false);
+            });
+    };
+
+    useEffect(() => {
+        fetchEventData();
+    }, []);
+
+    useEffect(() => {
+        console.log("EVENTS API", events);
+    }, [events]);
 
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
@@ -12,43 +34,21 @@ const Events = () => {
     const months = Array.from({ length: 12 }, (_, i) => {
         const month = (currentMonth + i) % 12;
         const year = currentYear + Math.floor((currentMonth + i) / 12);
-        return new Date(year, month).toLocaleString('en-US', { month: 'long' }).toLocaleUpperCase();
+        return new Date(year, month)
+            .toLocaleString("en-US", { month: "long" })
+            .toLocaleUpperCase();
     });
-
-    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary", "SoccerJuly", "FinalsMay", "VacationJune", "SeattleJune"];
-
-    const listItems = months.map((month, index) => {
-        const filteredEventItems = eventItems.filter((event) => {
-            console.log("event", event);
-            console.log("month", month);
-            return event.toLocaleUpperCase().includes(month);
-        });
-
-        return (
-            <li key={index}>
-                <h2>{month}</h2>
-                <ul>
-                    {filteredEventItems.map((event, eventIndex) => (
-                        <li key={eventIndex} style={{ listStyle: "none" }}>
-                            <EventCard eventName={event} />
-                        </li>
-                    ))}
-                </ul>
-            </li>
-        );
-    });
-
 
     return (
         <div>
             <div
                 style={{
                     backgroundImage: `url(${Rotunda})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100vw',
-                    height: '60vh',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    width: "100vw",
+                    height: "60vh",
                 }}
                 className="front-page-image"
             >
@@ -59,15 +59,42 @@ const Events = () => {
                 </div>
             </div>
             <Container>
-                <Typography>
-                    <h2 style={{ listStyle: "none", color: "#26365A" }}>
-                        {listItems}
-                    </h2>
-                </Typography>
-                <EventCard />
+                {isLoading ? (
+                    <Typography variant="h4" style={{ textAlign: "center" }}>
+                        Loading events...
+                    </Typography>
+                ) : (
+                    <>
+                        {months.map((month, index) => {
+                            const filteredEventItems = events.filter((event) => {
+                                console.log("event.dateAndTime:", event.dateAndTime);
+                                const isoDateString = event.dateAndTime;
+                                const dateObject = new Date(isoDateString);
+                                console.log("event date object", dateObject);
+
+                                return dateObject
+                                    .toLocaleString("default", { month: "long" })
+                                    .toUpperCase()
+                                    .includes(month);
+                            });
+
+                            return (
+                                <div key={index}>
+                                    <Typography variant="h4">{month}</Typography>
+                                    <ul>
+                                        {filteredEventItems.map((event, eventIndex) => (
+                                            <li key={eventIndex} style={{ listStyle: "none" }}>
+                                                <EventCard eventName={event.eventName} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            );
+                        })}
+                    </>
+                )}
             </Container>
         </div>
-    )
-
-}
-export default Events
+    );
+};
+export default Events;
