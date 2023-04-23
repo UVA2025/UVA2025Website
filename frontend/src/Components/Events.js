@@ -15,20 +15,31 @@ const Events = () => {
         return new Date(year, month).toLocaleString('en-US', { month: 'long' }).toLocaleUpperCase();
     });
 
-    const eventItems = ["Headshots", "Sunset Series", "Basketball"];
+    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary"];
 
-    const listItems = months.map((month, index) => (
-        <li key={index}>
-            <h2>{month}</h2>
-            <ul>
-                {eventItems.map((event, eventIndex) => (
-                    <li key={eventIndex}>
-                        <EventCard eventName={event} />
-                    </li>
-                ))}
-            </ul>
-        </li>
-    ));
+    // const listItems = months.map((month, index) => (
+    //     <li key={index}>
+    //         <h2>{month}</h2>
+    //         <ul>
+    //             {eventItems.map((event, eventIndex) => (
+    //                 <li key={eventIndex}>
+    //                     <EventCard eventName={event} />
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     </li>
+    // ));
+
+    const listItems = months.map((month, index) => {
+        const filteredEventItems = eventItems.filter((event) => {
+            if (month.length < 7) {
+                return event.includes("Series");
+            } else {
+                return event.includes("Basketball");
+            }
+        })
+    });
+
 
     return (
         <div>
@@ -59,9 +70,16 @@ const Events = () => {
             </div>
             <Container>
                 <Typography>
-                    <ul style={{ listStyle: "none", color: "#26365A" }}>
-                        {listItems}
-                    </ul>
+                    <li key={index}>
+                        <h2>{month}</h2>
+                        <ul>
+                            {filteredEventItems.map((event, eventIndex) => (
+                                <li key={eventIndex}>
+                                    <EventItem eventName={event} />
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
                 </Typography>
                 <EventCard />
             </Container>
