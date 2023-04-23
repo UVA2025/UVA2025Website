@@ -1,6 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/system';
 import Rotunda from '../images/Rotunda.jpeg';
+import EventCard from './EventCard';
 
 const Events = () => {
 
@@ -14,10 +15,22 @@ const Events = () => {
         return new Date(year, month).toLocaleString('en-US', { month: 'long' }).toLocaleUpperCase();
     });
 
-    const listItems = months.map((name, index) => <li key={index}>{name}</li>);
+    const eventItems = ["Headshots", "Sunset Series", "Basketball"];
+
+    const listItems = months.map((month, index) => (
+        <li key={index}>
+            <h2>{month}</h2>
+            <ul>
+                {eventItems.map((event, eventIndex) => (
+                    <li key={eventIndex}>
+                        <EventCard eventName={event} />
+                    </li>
+                ))}
+            </ul>
+        </li>
+    ));
 
     return (
-
         <div>
             <div
                 style={{
@@ -38,18 +51,20 @@ const Events = () => {
                     className="front-page-image">
                     <Typography>
                         <h1>
-                            TEXT
+                            EVENTS
                         </h1>
                     </Typography>
                 </div>
                 {/* Your content goes here */}
             </div>
             <Container>
-                <Typography><h1 style={{ listStyle: "none", color: "#26365A" }}>{listItems}</h1></Typography>
+                <Typography>
+                    <ul style={{ listStyle: "none", color: "#26365A" }}>
+                        {listItems}
+                    </ul>
+                </Typography>
+                <EventCard />
             </Container>
-
-
-
         </div>
     )
 
