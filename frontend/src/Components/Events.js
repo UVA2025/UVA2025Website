@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/system';
+import Rotunda from '../images/Rotunda.jpeg';
 
 const Events = () => {
 
@@ -18,12 +19,37 @@ const Events = () => {
     return (
 
         <div>
+            <div
+                style={{
+                    backgroundImage: `url(${Rotunda})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                    width: '100vw',
+                    height: '60vh',
+                }}
+                className="front-page-image"
+            >
+                <div
+                    style={{
+                        textAlign: "center",
+                        color: "White"
+                    }}
+                    className="front-page-image">
+                    <Typography>
+                        <h1>
+                            TEXT
+                        </h1>
+                    </Typography>
+                </div>
+                {/* Your content goes here */}
+            </div>
             <Container>
-            <Typography><h1 style={{listStyle: "none", color: "#26365A"}}>{listItems}</h1></Typography>
+                <Typography><h1 style={{ listStyle: "none", color: "#26365A" }}>{listItems}</h1></Typography>
             </Container>
-            
-            
-            
+
+
+
         </div>
     )
 
