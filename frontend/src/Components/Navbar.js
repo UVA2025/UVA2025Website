@@ -36,6 +36,12 @@ const Navbar = () => {
                             </Button>
                         </Link>
 
+                        <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
+                            <Button variant="text" color="secondary" onClick="/about">
+                                ABOUT
+                            </Button>
+                        </Link>
+
                         <Link to="/events" style={{ textDecoration: "none", color: "white" }}>
                             <Button variant="text" color="secondary" onClick="/events">
                                 EVENTS
@@ -45,12 +51,6 @@ const Navbar = () => {
                         <Link to="/resources" style={{ textDecoration: "none", color: "white" }}>
                             <Button variant="text" color="secondary" onClick="/resources">
                                 RESOURCES
-                            </Button>
-                        </Link>
-
-                        <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
-                            <Button variant="text" color="secondary" onClick="/about">
-                                ABOUT
                             </Button>
                         </Link>
 
