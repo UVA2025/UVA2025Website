@@ -15,7 +15,7 @@ const Events = () => {
         return new Date(year, month).toLocaleString('en-US', { month: 'long' }).toLocaleUpperCase();
     });
 
-    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary", "SoccerJuly"];
+    const eventItems = ["HeadshotsApril", "Sunset SeriesMarch", "BasketballJanuary", "SoccerJuly", "FinalsMay", "VacationJune", "SeattleJune"];
 
     const listItems = months.map((month, index) => {
         const filteredEventItems = eventItems.filter((event) => {
@@ -29,7 +29,7 @@ const Events = () => {
                 <h2>{month}</h2>
                 <ul>
                     {filteredEventItems.map((event, eventIndex) => (
-                        <li key={eventIndex} style={{listStyle: "none"}}>
+                        <li key={eventIndex} style={{ listStyle: "none" }}>
                             <EventCard eventName={event} />
                         </li>
                     ))}
@@ -52,19 +52,11 @@ const Events = () => {
                 }}
                 className="front-page-image"
             >
-                <div
-                    style={{
-                        textAlign: "center",
-                        color: "White"
-                    }}
-                    className="front-page-image">
+                <div style={{ textAlign: "center", color: "white" }}>
                     <Typography>
-                        <h1>
-                            EVENTS
-                        </h1>
+                        <h1 style={{ margin: "0" }}>EVENTS</h1>
                     </Typography>
                 </div>
-                {/* Your content goes here */}
             </div>
             <Container>
                 <Typography>
