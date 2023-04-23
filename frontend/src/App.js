@@ -20,7 +20,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <Footer />
+        <Footer/>
       </Router>
     </div>
   );
