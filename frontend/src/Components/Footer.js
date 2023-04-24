@@ -8,6 +8,7 @@ import {
     Heading,
 } from "./FooterStyles";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CircularImage from './CircularImage';
 
 const theme = createTheme({
     palette: {
@@ -30,10 +31,11 @@ const Footer = () => {
             <Box>
                 <Container>
 
-                    <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
+                    <Row style={{ paddingTop: "50px", paddingBottom: "30px" }}>
                         <Column>
+
                             <FooterLink href="https://alumni.virginia.edu" target="_blank">
-                                <img src={require('../images/footericon.jpg')} height={100} width={100} alt="Logo" />
+                                <CircularImage src={require('../images/footericon.jpg')} alt="Your Image Description" size={120} />
                             </FooterLink>
                         </Column>
                         <Column>
