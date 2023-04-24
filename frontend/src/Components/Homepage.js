@@ -43,7 +43,7 @@ const Homepage = () => {
                         display="in-line"
                         sx={{ justifyContent: "center" }}      >
                         <Typography><h1 style={{ textAlign: "right" }}>WHO WE ARE</h1></Typography>
-                        <Typography><p style={{ textAlign: "right" }}>This is the example text for the Second Year Council (soon to be Third Year Council)</p></Typography>
+                        <Typography><p style={{ textAlign: "right" }}>Welcome to the official website for the Class of 2025 Third Year Council! Check out upcoming events through the Events tab or various committees through the Resources tab.</p></Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={10} sm={4} md={4} justifyContent="center">
