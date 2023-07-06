@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { Container, Grid, Box } from '@mui/material';
-import Rotunda from '../images/Rotunda.jpeg';
+import StudentEvents from '../images/student_events.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
 
@@ -51,12 +51,12 @@ const Events = () => {
     <div>
       <div
         style={{
-          backgroundImage: `url(${Rotunda})`,
+          backgroundImage: `url(${StudentEvents})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
           width: "100vw",
-          height: "60vh",
+          height: "48vh",
         }}
         className="front-page-image"
       >
@@ -87,7 +87,7 @@ const Events = () => {
               return (
                 <div key={index}>
                   <Box my={4}>
-                    <Typography variant="h4">{month}</Typography>
+                    <Typography variant="h4"><b>{month}</b></Typography>
                   </Box>
                   <Grid container spacing={2}>
                     {filteredEventItems.map((event, eventIndex) => (
