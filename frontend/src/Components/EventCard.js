@@ -58,7 +58,7 @@ const getParagraphText = (props) => {
 
 const EventCard = (props) => {
     return (
-        <Card>
+        <Card sx={{ p: 2 }}>
             {console.log(props)}
             <Grid container spacing={5} justifyContent="center">
                 <Grid item xs={12} sm={4}>
