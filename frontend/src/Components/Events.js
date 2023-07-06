@@ -68,6 +68,7 @@ const Events = () => {
                         {months.map((month, index) => {
                             const filteredEventItems = events.filter((event) => {
                                 console.log("event.dateAndTime:", event.dateAndTime);
+                                console.log("event", event);
                                 const isoDateString = event.dateAndTime;
                                 const dateObject = new Date(isoDateString);
                                 console.log("event date object", dateObject);
@@ -84,7 +85,7 @@ const Events = () => {
                                     <ul>
                                         {filteredEventItems.map((event, eventIndex) => (
                                             <li key={eventIndex} style={{ listStyle: "none" }}>
-                                                <EventCard eventName={event.eventName} />
+                                                <EventCard event={event} />
                                             </li>
                                         ))}
                                     </ul>
