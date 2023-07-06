@@ -1,5 +1,5 @@
 import { Card, Grid } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 const formatDate = (dateString) => {
     const options = {
@@ -41,42 +41,44 @@ const getDaySuffix = (day) => {
 
 const getParagraphText = (props) => {
     let text = "";
-  
+
     props.event.content.forEach((contentElement) => {
         console.log("contentElement", contentElement);
-      if (contentElement.nodeType === 'paragraph') {
-        contentElement.content.forEach((textVal) => {
-            text += textVal.value;
-        })
-      }
+        if (contentElement.nodeType === 'paragraph') {
+            contentElement.content.forEach((textVal) => {
+                text += textVal.value;
+            })
+        }
     });
 
     console.log("text", text);
-  
+
     return text.trim();
-  };
+};
 
 const EventCard = (props) => {
     return (
-        <Card sx={{ p: 2 }}>
-            {console.log(props)}
-            <Grid container spacing={5} justifyContent="center">
-                <Grid item xs={12} sm={4}>
-                    <img
-                        src={"https:" + props.event.image.file.url}
-                        alt={props.event.eventName}
-                        height={500}
-                        style={{ maxWidth: "100%", height: "auto" }}
-                    />
+        // <Link to={eventUrl} style={{ textDecoration: 'none' }}>
+            <Card sx={{ p: 2 }}>
+                {console.log(props)}
+                <Grid container spacing={5} justifyContent="center">
+                    <Grid item xs={12} sm={4}>
+                        <img
+                            src={"https:" + props.event.image.file.url}
+                            alt={props.event.eventName}
+                            height={500}
+                            style={{ maxWidth: "100%", height: "auto" }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={8}>
+                        <div><b>{props.event.eventName.toUpperCase()}</b></div>
+                        <div>{formatDate(props.event.dateAndTime)}</div>
+                        <br></br>
+                        <p>{getParagraphText(props)}</p>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={8}>
-                    <div><b>{props.event.eventName.toUpperCase()}</b></div>
-                    <div>{formatDate(props.event.dateAndTime)}</div>
-                    <br></br>
-                    <p>{getParagraphText(props)}</p>
-                </Grid>
-            </Grid>
-        </Card>
+            </Card>
+        // </Link>
     );
 };
 
