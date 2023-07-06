@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/system';
+import { Container, Grid } from '@mui/material';
 import Rotunda from '../images/Rotunda.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
@@ -10,9 +10,7 @@ const Events = () => {
 
     const fetchEventData = () => {
         fetch("http://localhost:9000/api/v1/events")
-            .then(response => {
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 setEvents(data);
                 setIsLoading(false);
@@ -22,10 +20,6 @@ const Events = () => {
     useEffect(() => {
         fetchEventData();
     }, []);
-
-    useEffect(() => {
-        console.log("EVENTS API", events);
-    }, [events]);
 
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
@@ -67,11 +61,8 @@ const Events = () => {
                     <>
                         {months.map((month, index) => {
                             const filteredEventItems = events.filter((event) => {
-                                console.log("event.dateAndTime:", event.dateAndTime);
-                                console.log("event", event);
                                 const isoDateString = event.dateAndTime;
                                 const dateObject = new Date(isoDateString);
-                                console.log("event date object", dateObject);
 
                                 return dateObject
                                     .toLocaleString("default", { month: "long" })
@@ -82,13 +73,13 @@ const Events = () => {
                             return (
                                 <div key={index}>
                                     <Typography variant="h4">{month}</Typography>
-                                    <ul>
+                                    <Grid container spacing={2}>
                                         {filteredEventItems.map((event, eventIndex) => (
-                                            <li key={eventIndex} style={{ listStyle: "none" }}>
+                                            <Grid item xs={12} sm={6} key={eventIndex}>
                                                 <EventCard event={event} />
-                                            </li>
+                                            </Grid>
                                         ))}
-                                    </ul>
+                                    </Grid>
                                 </div>
                             );
                         })}
@@ -98,4 +89,5 @@ const Events = () => {
         </div>
     );
 };
+
 export default Events;
