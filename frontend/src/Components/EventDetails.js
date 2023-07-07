@@ -59,61 +59,65 @@ const getParagraphText = (event) => {
 
 
 const EventDetails = (props) => {
-  const { eventId } = useParams();
-  const [event, setEvent] = useState(null);
+    const { eventId } = useParams();
+    const [event, setEvent] = useState(null);
 
-  useEffect(() => {
-    const fetchEvent = async () => {
-      try {
-        const response = await fetch(`http://localhost:9000/api/v1/events/${eventId}`);
-        const data = await response.json();
-        // Update the state with the received event data
-        setEvent(data);
-      } catch (error) {
-        // Handle any errors that occur during the request
-        console.log(error);
-      }
-    };
+    useEffect(() => {
+        const fetchEvent = async () => {
+            try {
+                const response = await fetch(`http://localhost:9000/api/v1/events/${eventId}`);
+                const data = await response.json();
+                // Update the state with the received event data
+                setEvent(data);
+            } catch (error) {
+                // Handle any errors that occur during the request
+                console.log(error);
+            }
+        };
 
-    fetchEvent();
-  }, [eventId]);
+        fetchEvent();
+    }, [eventId]);
 
-  if (!event) {
+    if (!event) {
+        return (
+            <div>
+                <Typography variant="h4">Loading...</Typography>
+            </div>
+        );
+    }
+
     return (
-      <div>
-        <Typography variant="h4">Loading...</Typography>
-      </div>
+        <div>
+            <br></br>
+            <Grid container spacing={2} justifyContent="center">
+                <Grid item xs={12} md={8} lg={6}>
+                    <Card>
+                        <div style={{ height: 300, overflow: 'hidden' }}>
+                            <img
+                                src={event.image.file.url}
+                                alt={event.eventName}
+                                style={{ width: '100%', objectFit: 'cover' }}
+                            />
+                        </div>
+                        <CardContent>
+                            <Typography variant="h5" gutterBottom>
+                                {event.eventName}
+                            </Typography>
+                            <Typography variant="subtitle1" gutterBottom>
+                                {formatDate(event.dateAndTime)}
+                            </Typography>
+                            <Typography variant="body1" paragraph>
+                                {console.log("event NEW", event)}
+                            </Typography>
+                            {/* Additional event details or components */}
+                            {getParagraphText(event)}
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
+            <br></br>
+        </div>
     );
-  }
-
-  return (
-    <Grid container spacing={2} justifyContent="center">
-      <Grid item xs={12} md={8} lg={6}>
-        <Card>
-          <div style={{ height: 300, overflow: 'hidden' }}>
-            <img
-              src={event.image.file.url}
-              alt={event.eventName}
-              style={{ width: '100%', objectFit: 'cover' }}
-            />
-          </div>
-          <CardContent>
-            <Typography variant="h5" gutterBottom>
-              {event.eventName}
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              {formatDate(event.dateAndTime)}
-            </Typography>
-            <Typography variant="body1" paragraph>
-              {console.log("event NEW", event)}
-            </Typography>
-            {/* Additional event details or components */}
-            {getParagraphText(event)}
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
-  );
 };
 
 export default EventDetails;

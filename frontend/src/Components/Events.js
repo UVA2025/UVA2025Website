@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import { Container, Grid, Box } from '@mui/material';
+import { Container, Grid, Box, Divider } from '@mui/material';
 import StudentEvents from '../images/student_events.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
@@ -96,6 +96,9 @@ const Events = () => {
                       </Grid>
                     ))}
                   </Grid>
+                  <br></br>
+                  <br></br>
+                  <Divider variant="middle" />
                 </div>
               );
             })}
