@@ -67,12 +67,12 @@ const Footer = () => {
                         </Column>
                         <Column style={{ color: "white" }}>
                             <span style={{ marginBottom: "1em" }}>
-                                <b>James Edwards, President:</b>
+                                <b>James Edwards, President: </b>
                                 <a href="mailto:jyq2ey@virginia.edu" style={{ color: "white" }}>jyq2ey@virginia.edu</a>
                             </span>
                             <br></br>
                             <span>
-                                <b>Liv Schortmann, Vice President:</b>
+                                <b>Liv Schortmann, Vice President: </b>
                                 <a href="mailto:kba3bw@virginia.edu" style={{ color: "white" }}>kba3bw@virginia.edu</a>
                             </span>
                         </Column>

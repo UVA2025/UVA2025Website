@@ -58,7 +58,7 @@ const getParagraphText = (props) => {
 
 const EventCard = (props) => {
     return (
-        // <Link to={eventUrl} style={{ textDecoration: 'none' }}>
+        <Link to={`/events/${props.event.id}`} style={{ textDecoration: 'none' }}>
             <Card sx={{ p: 2 }}>
                 {console.log(props)}
                 <Grid container spacing={5} justifyContent="center">
@@ -78,7 +78,7 @@ const EventCard = (props) => {
                     </Grid>
                 </Grid>
             </Card>
-        // </Link>
+        </Link>
     );
 };
 
