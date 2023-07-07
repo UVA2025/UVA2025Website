@@ -92,13 +92,21 @@ const EventDetails = (props) => {
             <Grid container spacing={2} justifyContent="center">
                 <Grid item xs={12} md={8} lg={6}>
                     <Card>
-                        <div style={{ height: 300, overflow: 'hidden' }}>
-                            <img
-                                src={event.image.file.url}
-                                alt={event.eventName}
-                                style={{ width: '100%', objectFit: 'cover' }}
-                            />
-                        </div>
+                        <CardMedia
+                            component="img"
+                            alt={event.eventName}
+                            height="auto"
+                            image={event.image.file.url}
+                            style={{
+                                maxWidth: 300,
+                                maxHeight: 300,
+                                width: 'auto',
+                                height: 'auto',
+                                objectFit: 'contain',
+                                display: 'block',
+                                margin: 'auto'
+                            }}
+                        />
                         <CardContent>
                             <Typography variant="h5" gutterBottom>
                                 {event.eventName}
@@ -119,5 +127,6 @@ const EventDetails = (props) => {
         </div>
     );
 };
+
 
 export default EventDetails;
