@@ -26,13 +26,22 @@ const Navbar = () => {
             <AppBar position="static">
                 <ThemeProvider theme={theme}>
                     <Toolbar style={{ backgroundColor: "#26365A", display: 'flex', alignItems: 'center' }}>
-                        <img src={require('../images/uva2025.png')} height={50} alt="Logo" />
+                        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                            <img src={require('../images/uva2025.png')} height={50} alt="Logo" />
+                        </Link>
+
 
                         <Box sx={{ flexGrow: 1 }}></Box>
 
                         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                             <Button variant="text" color="secondary" onClick="">
                                 HOME
+                            </Button>
+                        </Link>
+
+                        <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
+                            <Button variant="text" color="secondary" onClick="/about">
+                                ABOUT
                             </Button>
                         </Link>
 
@@ -45,12 +54,6 @@ const Navbar = () => {
                         <Link to="/resources" style={{ textDecoration: "none", color: "white" }}>
                             <Button variant="text" color="secondary" onClick="/resources">
                                 RESOURCES
-                            </Button>
-                        </Link>
-
-                        <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
-                            <Button variant="text" color="secondary" onClick="/about">
-                                ABOUT
                             </Button>
                         </Link>
 

@@ -8,6 +8,7 @@ import {
     Heading,
 } from "./FooterStyles";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CircularImage from './CircularImage';
 
 const theme = createTheme({
     palette: {
@@ -30,40 +31,50 @@ const Footer = () => {
             <Box>
                 <Container>
 
-                    <Row>
+                    <Row style={{ paddingTop: "50px", paddingBottom: "30px" }}>
                         <Column>
-                        <img src={require('../images/footericon.jpg')} height={100} width={100} alt="Logo" />
+
+                            <FooterLink href="https://alumni.virginia.edu" target="_blank">
+                                <CircularImage src={require('../images/footericon.jpg')} alt="Your Image Description" size={120} />
+                            </FooterLink>
                         </Column>
                         <Column>
                             <FooterLink href="#">Meet the Team</FooterLink>
                         </Column>
 
                         <Column>
-                            <FooterLink href="#">
+                            {/* <FooterLink href="#">
                                 <i className="fab fa-facebook-f">
                                     <span style={{ marginLeft: "10px" }}>
                                         Facebook
                                     </span>
                                 </i>
-                            </FooterLink>
-                            <FooterLink href="#">
+                            </FooterLink> */}
+                            <FooterLink href="https://www.instagram.com/classof2025uva/?hl=en" target="_blank">
                                 <i className="fab fa-instagram">
                                     <span style={{ marginLeft: "10px" }}>
                                         Instagram
                                     </span>
                                 </i>
                             </FooterLink>
-                            <FooterLink href="#">
+                            {/* <FooterLink href="#">
                                 <i className="fab fa-youtube">
                                     <span style={{ marginLeft: "10px" }}>
-                                        Youtube
+                                        YouTube
                                     </span>
                                 </i>
-                            </FooterLink>
+                            </FooterLink> */}
                         </Column>
                         <Column style={{ color: "white" }}>
-                            <b>Contact the President:</b> presidentemail@virginia.edu
-                            <b>Contact the Vice-President:</b> vpemail@virginia.edu
+                            <span style={{ marginBottom: "1em" }}>
+                                <b>James Edwards, President: </b>
+                                <a href="mailto:jyq2ey@virginia.edu" style={{ color: "white" }}>jyq2ey@virginia.edu</a>
+                            </span>
+                            <br></br>
+                            <span>
+                                <b>Liv Schortmann, Vice President: </b>
+                                <a href="mailto:kba3bw@virginia.edu" style={{ color: "white" }}>kba3bw@virginia.edu</a>
+                            </span>
                         </Column>
                     </Row>
                 </Container>
