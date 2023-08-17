@@ -43,13 +43,13 @@ const Footer = () => {
                         </Column>
 
                         <Column>
-                            <FooterLink href="#">
+                            {/* <FooterLink href="#">
                                 <i className="fab fa-facebook-f">
                                     <span style={{ marginLeft: "10px" }}>
                                         Facebook
                                     </span>
                                 </i>
-                            </FooterLink>
+                            </FooterLink> */}
                             <FooterLink href="https://www.instagram.com/classof2025uva/?hl=en" target="_blank">
                                 <i className="fab fa-instagram">
                                     <span style={{ marginLeft: "10px" }}>
@@ -57,13 +57,13 @@ const Footer = () => {
                                     </span>
                                 </i>
                             </FooterLink>
-                            <FooterLink href="#">
+                            {/* <FooterLink href="#">
                                 <i className="fab fa-youtube">
                                     <span style={{ marginLeft: "10px" }}>
                                         YouTube
                                     </span>
                                 </i>
-                            </FooterLink>
+                            </FooterLink> */}
                         </Column>
                         <Column style={{ color: "white" }}>
                             <span style={{ marginBottom: "1em" }}>
