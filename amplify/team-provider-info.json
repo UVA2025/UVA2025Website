@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uva2025website-dev-134431-authRole",
+      "UnauthRoleArn": "arn:aws:iam::401224893669:role/amplify-uva2025website-dev-134431-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::401224893669:role/amplify-uva2025website-dev-134431-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-uva2025website-dev-134431-deployment",
+      "UnauthRoleName": "amplify-uva2025website-dev-134431-unauthRole",
+      "StackName": "amplify-uva2025website-dev-134431",
+      "StackId": "arn:aws:cloudformation:us-east-1:401224893669:stack/amplify-uva2025website-dev-134431/0d0b9dc0-436f-11ee-88fb-12ebc7d26321",
+      "AmplifyAppId": "d2inz6m0qkgzlh"
+    },
+    "categories": {
+      "function": {
+        "uva2025website3ac951f1": {
+          "deploymentBucketName": "amplify-uva2025website-dev-134431-deployment",
+          "s3Key": "amplify-builds/uva2025website3ac951f1-7034686e5837564a4648-build.zip"
+        }
+      },
+      "api": {
+        "ContentfulEvents": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "api": {
+    "ContentfulEvents": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "uva2025website3ac951f1"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "uva2025website3ac951f1": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_uva2025website3ac951f1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website3ac951f1"
+        }
+      ]
+    },
+    "AMPLIFY_function_uva2025website3ac951f1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website3ac951f1"
+        }
+      ]
+    }
+  }
+}
