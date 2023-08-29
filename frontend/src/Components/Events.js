@@ -3,19 +3,21 @@ import { Container, Grid, Box, Divider } from '@mui/material';
 import StudentEvents from '../images/student_events.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
+import { API } from 'aws-amplify';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const fetchEventData = () => {
-        fetch("http://localhost:9000/api/v1/events")
-            .then(response => response.json())
-            .then(data => {
-                setEvents(data);
-                setIsLoading(false);
-            });
-    };
+    async function fetchEventData() {
+        try {
+            const response = await API.get('ContentfulEvents', '/events');
+            setEvents(response);
+            setIsLoading(false);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
 
     useEffect(() => {
         fetchEventData();

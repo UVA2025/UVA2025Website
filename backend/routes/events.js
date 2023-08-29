@@ -24,6 +24,18 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/cool', function(req, res, next) {
+  console.log("HELLO");
+      const event = {
+        eventName: "hello",
+        content: "response.fields.description.content",
+        image: "response.fields.image.fields",
+        dateAndTime: "response.fields.dateAndTime",
+        id: "response.sys.id"
+      };
+      res.send(event);
+});
+
 router.get('/:eventId', function(req, res, next) {
   const eventId = req.params.eventId;
   console.log("HELLO");

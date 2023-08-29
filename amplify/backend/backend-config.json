@@ -1,0 +1,112 @@
+{
+  "api": {
+    "ContentfulEvents": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "uva2025website1154a5abe"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "ContentfulEvents2": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ContentfulEvents2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "ContentfulEvents2": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "uva2025website1154a5abe": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_ContentfulEvents2_contentfulAccessToken": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEvents2"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEvents2_contentfulSpace": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEvents2"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEvents2_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEvents2"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEvents2_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEvents2"
+        }
+      ]
+    },
+    "AMPLIFY_function_uva2025website1154a5abe_contentfulAccessToken": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website1154a5abe"
+        }
+      ]
+    },
+    "AMPLIFY_function_uva2025website1154a5abe_contentfulSpace": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website1154a5abe"
+        }
+      ]
+    },
+    "AMPLIFY_function_uva2025website1154a5abe_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website1154a5abe"
+        }
+      ]
+    },
+    "AMPLIFY_function_uva2025website1154a5abe_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uva2025website1154a5abe"
+        }
+      ]
+    }
+  }
+}

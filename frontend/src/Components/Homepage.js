@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import SYCBackgroundImage from '../images/SYC_Photo.jpg';
+import SYCBackgroundImage from '../images/TYC_Photo.jpeg';
 
 const Homepage = () => {
     return (

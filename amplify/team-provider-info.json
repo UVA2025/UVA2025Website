@@ -1,0 +1,35 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uva2025website1-dev-133331-authRole",
+      "UnauthRoleArn": "arn:aws:iam::401224893669:role/amplify-uva2025website1-dev-133331-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::401224893669:role/amplify-uva2025website1-dev-133331-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
+      "UnauthRoleName": "amplify-uva2025website1-dev-133331-unauthRole",
+      "StackName": "amplify-uva2025website1-dev-133331",
+      "StackId": "arn:aws:cloudformation:us-east-1:401224893669:stack/amplify-uva2025website1-dev-133331/d891d810-44ff-11ee-99f8-12adc10573c9",
+      "AmplifyAppId": "d2712u0p99pweu"
+    },
+    "categories": {
+      "function": {
+        "uva2025website1154a5abe": {
+          "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
+          "contentfulSpace": "y8n7iwhlp9mv",
+          "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
+          "s3Key": "amplify-builds/uva2025website1154a5abe-7a35363039705266322b-build.zip"
+        },
+        "ContentfulEvents2": {
+          "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
+          "contentfulSpace": "y8n7iwhlp9mv",
+          "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
+          "s3Key": "amplify-builds/ContentfulEvents2-45416f36574d756f4358-build.zip"
+        }
+      },
+      "api": {
+        "ContentfulEvents": {},
+        "ContentfulEvents2": {}
+      }
+    }
+  }
+}

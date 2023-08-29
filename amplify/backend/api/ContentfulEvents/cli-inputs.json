@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/events": {
+      "name": "/events",
+      "lambdaFunction": "uva2025website1154a5abe",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

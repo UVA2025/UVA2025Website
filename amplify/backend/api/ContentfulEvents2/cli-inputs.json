@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/api/v1/events": {
+      "name": "/api/v1/events",
+      "lambdaFunction": "ContentfulEvents2",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

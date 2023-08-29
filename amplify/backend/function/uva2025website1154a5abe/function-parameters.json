@@ -1,0 +1,13 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "contentfulAccessToken",
+      "environmentVariableName": "CONTENTFUL_ACCESS_TOKEN"
+    },
+    {
+      "cloudFormationParameterName": "contentfulSpace",
+      "environmentVariableName": "CONTENTFUL_SPACE"
+    }
+  ]
+}
