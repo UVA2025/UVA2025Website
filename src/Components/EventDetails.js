@@ -1,6 +1,7 @@
 import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import { API } from 'aws-amplify';
 
 const formatDate = (dateString) => {
     const options = {
@@ -65,8 +66,8 @@ const EventDetails = (props) => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const response = await fetch(`http://localhost:9000/api/v1/events/${eventId}`);
-                const data = await response.json();
+                const response = await API.get('ContentfulEvents', '/events/' + eventId);
+                const data = await response;
                 // Update the state with the received event data
                 setEvent(data);
             } catch (error) {

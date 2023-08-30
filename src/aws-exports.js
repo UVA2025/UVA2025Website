@@ -13,6 +13,11 @@ const awsmobile = {
             "name": "ContentfulEvents2",
             "endpoint": "https://h7oyldr60g.execute-api.us-east-1.amazonaws.com/dev",
             "region": "us-east-1"
+        },
+        {
+            "name": "ContentfulEventWithID",
+            "endpoint": "https://m728606i2f.execute-api.us-east-1.amazonaws.com/dev",
+            "region": "us-east-1"
         }
     ]
 };
