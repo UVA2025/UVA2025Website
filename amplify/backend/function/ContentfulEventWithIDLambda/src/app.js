@@ -1,4 +1,18 @@
 /*
+Use the following code to retrieve configured secrets from SSM:
+
+const aws = require('aws-sdk');
+
+const { Parameters } = await (new aws.SSM())
+  .getParameters({
+    Names: ["CONTENTFUL_ACCESS_TOKEN","CONTENTFUL_SPACE"].map(secretName => process.env[secretName]),
+    WithDecryption: true,
+  })
+  .promise();
+
+Parameters will be of the form { Name: 'secretName', Value: 'secretValue', ... }[]
+*/
+/*
 Copyright 2017 - 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
     http://aws.amazon.com/apache2.0/
@@ -36,61 +50,47 @@ const client = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE
 });
 
-console.log("client", client);
-
-
 /**********************
  * Example get method *
  **********************/
 
-app.get('/events', async (req, res) => {
-  try {
-    const response = await client.getEntries();
-    const filteredItems = response.items.map(item => ({
-      eventName: item.fields.eventName,
-      content: item.fields.description.content,
-      image: item.fields.image.fields,
-      dateAndTime: item.fields.dateAndTime,
-      id: item.sys.id
-    }));
-    console.log("filteredItems", filteredItems);
-    res.json(filteredItems);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+app.get('/events/:id', (req, res) => {
+  const eventId = req.params.id; // Changed from req.params.eventId
+  res.send(eventId);
+  // client.getEntry(eventId)
+  //   .then(response => {
+  //     const event = {
+  //       eventName: response.fields.eventName,
+  //       content: response.fields.description.content,
+  //       image: response.fields.image.fields,
+  //       dateAndTime: response.fields.dateAndTime,
+  //       id: response.sys.id
+  //     };
+  //     res.send(event);
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.sendStatus(500); // Sending an error response
+  //   });
 });
 
-app.get('/events/:id*', function(req, res) {
+app.get('/events/:id/*', function(req, res) {
   // Add your code here
+  // res.json({success: 'get call succeed!', url: req.url});
   const eventId = req.params.id; // Changed from req.params.eventId
-  client.getEntry(eventId)
-    .then(response => {
-      const event = {
-        eventName: response.fields.eventName,
-        content: response.fields.description.content,
-        image: response.fields.image.fields,
-        dateAndTime: response.fields.dateAndTime,
-        id: response.sys.id
-      };
-      res.send(event);
-    })
-    .catch(err => {
-      console.log(err);
-      res.sendStatus(500);
-    });
+  res.send(eventId);
 });
 
 /****************************
 * Example post method *
 ****************************/
 
-app.post('/events', function(req, res) {
+app.post('/events/:id', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
 
-app.post('/events/*', function(req, res) {
+app.post('/events/:id/*', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
@@ -99,12 +99,12 @@ app.post('/events/*', function(req, res) {
 * Example put method *
 ****************************/
 
-app.put('/events', function(req, res) {
+app.put('/events/:id', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
 
-app.put('/events/*', function(req, res) {
+app.put('/events/:id/*', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
@@ -113,12 +113,12 @@ app.put('/events/*', function(req, res) {
 * Example delete method *
 ****************************/
 
-app.delete('/events', function(req, res) {
+app.delete('/events/:id', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
-app.delete('/events/*', function(req, res) {
+app.delete('/events/:id/*', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });

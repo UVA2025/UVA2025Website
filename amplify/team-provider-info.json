@@ -13,22 +13,30 @@
     },
     "categories": {
       "function": {
-        "uva2025website1154a5abe": {
-          "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
-          "contentfulSpace": "y8n7iwhlp9mv",
-          "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
-          "s3Key": "amplify-builds/uva2025website1154a5abe-7a35363039705266322b-build.zip"
-        },
         "ContentfulEvents2": {
           "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
           "contentfulSpace": "y8n7iwhlp9mv",
           "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
           "s3Key": "amplify-builds/ContentfulEvents2-45416f36574d756f4358-build.zip"
+        },
+        "uva2025website1154a5abe": {
+          "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
+          "contentfulSpace": "y8n7iwhlp9mv",
+          "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
+          "s3Key": "amplify-builds/uva2025website1154a5abe-7169485a472f716f526a-build.zip"
+        },
+        "ContentfulEventWithIDLambda": {
+          "contentfulAccessToken": "yQH9HU62eRK4xLWJiyLOAO9WX7Cd2ddhkhzo2ht-K_o",
+          "contentfulSpace": "y8n7iwhlp9mv",
+          "secretsPathAmplifyAppId": "d2712u0p99pweu",
+          "deploymentBucketName": "amplify-uva2025website1-dev-133331-deployment",
+          "s3Key": "amplify-builds/ContentfulEventWithIDLambda-5550524a5652344b4e4a-build.zip"
         }
       },
       "api": {
         "ContentfulEvents": {},
-        "ContentfulEvents2": {}
+        "ContentfulEvents2": {},
+        "ContentfulEventWithID": {}
       }
     }
   }

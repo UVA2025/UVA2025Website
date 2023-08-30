@@ -1,5 +1,19 @@
 {
   "api": {
+    "ContentfulEventWithID": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "ContentfulEvents": {
       "dependsOn": [
         {
@@ -30,6 +44,12 @@
     }
   },
   "function": {
+    "ContentfulEventWithIDLambda": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "ContentfulEvents2": {
       "build": true,
       "dependsOn": [],
@@ -44,6 +64,46 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_ContentfulEventWithIDLambda_contentfulAccessToken": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEventWithIDLambda_contentfulSpace": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEventWithIDLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEventWithIDLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ContentfulEventWithIDLambda_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ContentfulEventWithIDLambda"
+        }
+      ]
+    },
     "AMPLIFY_function_ContentfulEvents2_contentfulAccessToken": {
       "usedBy": [
         {

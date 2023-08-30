@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/events/{id}": {
+      "name": "/events/{id}",
+      "lambdaFunction": "ContentfulEventWithIDLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
