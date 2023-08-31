@@ -43,15 +43,12 @@ const getParagraphText = (props) => {
     let text = "";
 
     props.event.content.forEach((contentElement) => {
-        console.log("contentElement", contentElement);
         if (contentElement.nodeType === 'paragraph') {
             contentElement.content.forEach((textVal) => {
                 text += textVal.value;
             })
         }
     });
-
-    console.log("text", text);
 
     return text.trim();
 };
@@ -60,7 +57,6 @@ const EventCard = (props) => {
     return (
         <Link to={`/events/${props.event.id}`} style={{ textDecoration: 'none' }}>
             <Card sx={{ p: 2 }}>
-                {console.log(props)}
                 <Grid container spacing={5} justifyContent="center">
                     <Grid item xs={12} sm={4}>
                         <img

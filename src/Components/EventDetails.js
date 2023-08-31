@@ -45,15 +45,12 @@ const getParagraphText = (event) => {
     let text = "";
 
     event.content.forEach((contentElement) => {
-        console.log("contentElement", contentElement);
         if (contentElement.nodeType === 'paragraph') {
             contentElement.content.forEach((textVal) => {
                 text += textVal.value;
             })
         }
     });
-
-    console.log("text", text);
 
     return text.trim();
 };
@@ -116,7 +113,7 @@ const EventDetails = (props) => {
                                 {formatDate(event.dateAndTime)}
                             </Typography>
                             <Typography variant="body1" paragraph>
-                                {console.log("event NEW", event)}
+                                {/* {console.log("event NEW", event)} */}
                             </Typography>
                             {/* Additional event details or components */}
                             {getParagraphText(event)}
