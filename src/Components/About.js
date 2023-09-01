@@ -31,32 +31,33 @@ export const About = () => {
 
     return (
         <div>
-          <Container style={{ marginBottom: "40vh" }}>
-            <Typography
-              variant="h4"
-              style={{
-                textAlign: "center",
-                marginBottom: "2rem",
-                marginTop: "2rem" // Add margin at the top
-              }}
-            >
-              Exec
-            </Typography>
-            <Grid container spacing={2}>
-              {exec.map((person, index) => (
-                <Grid item xs={12} sm={6} md={3} key={index}>
-                  <PersonCard
-                    name={person.name}
-                    email={<a href={`mailto:${person.email}`}>{person.email}</a>}
-                    image={person.image}
-                    position={person.position}
-                  />
+            <Container style={{ marginBottom: "40vh" }}>
+                <Typography
+                    variant="h4"
+                    style={{
+                        textAlign: "center",
+                        marginBottom: "2rem",
+                        marginTop: "2rem", // Add margin at the top
+                        fontWeight: 600 // Adjust the fontWeight value (e.g., 600 is slightly less bold)
+                    }}
+                >
+                    EXECUTIVE BOARD
+                </Typography>
+                <Grid container spacing={2}>
+                    {exec.map((person, index) => (
+                        <Grid item xs={12} sm={6} md={3} key={index}>
+                            <PersonCard
+                                name={person.name}
+                                email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                                image={person.image}
+                                position={person.position}
+                            />
+                        </Grid>
+                    ))}
                 </Grid>
-              ))}
-            </Grid>
-          </Container>
+            </Container>
         </div>
-      );
+    );
 };
 
 export default About
