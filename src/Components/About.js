@@ -23,7 +23,7 @@ export const About = () => {
 
     return (
         <div>
-            <Container style={{ marginBottom: "40vh" }}>
+            {/* <Container style={{ marginBottom: "40vh" }}>
                 <Grid container spacing={2}>
                     {exec.map((person, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
@@ -35,6 +35,13 @@ export const About = () => {
                             />
                         </Grid>
                     ))}
+                </Grid>
+            </Container> */}
+            <Container style={{ marginBottom: "40vh" }}>
+                <Grid>
+                    <Typography variant="h4" style={{textAlign:"center", marginTop:"30vh"}}>
+                        Resources Page Coming Soon!
+                    </Typography>
                 </Grid>
             </Container>
         </div>
