@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material"
+import { Container, Grid, Typography, Box } from "@mui/material"
 import PersonCard from "./PersonCard"
 
 export const About = () => {
@@ -32,7 +32,7 @@ export const About = () => {
     return (
         <div>
             <Container style={{ marginBottom: "40vh" }}>
-                <Typography
+                {/* <Typography
                     variant="h4"
                     style={{
                         textAlign: "center",
@@ -42,7 +42,10 @@ export const About = () => {
                     }}
                 >
                     EXECUTIVE BOARD
-                </Typography>
+                </Typography> */}
+                <Box my={4}>
+                    <Typography variant="h4"><b>EXECUTIVE BOARD</b></Typography>
+                </Box>
                 <Grid container spacing={2}>
                     {exec.map((person, index) => (
                         <Grid item xs={12} sm={6} md={3} key={index}>
