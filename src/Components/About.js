@@ -47,7 +47,7 @@ export const About = () => {
                 <Grid item xs={12} sm={6} md={3} key={index}>
                   <PersonCard
                     name={person.name}
-                    email={person.email}
+                    email={<a href={`mailto:${person.email}`}>{person.email}</a>}
                     image={person.image}
                     position={person.position}
                   />
