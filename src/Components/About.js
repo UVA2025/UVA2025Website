@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material"
+import { Container, Grid, Typography, Box } from "@mui/material"
 import PersonCard from "./PersonCard"
 
 export const About = () => {
@@ -16,32 +16,47 @@ export const About = () => {
             position: "Vice President"
         },
         {
-            name: "Jonathan Scanlon"
+            name: "Jonathan Scanlon",
+            email: "jbs7ah@virginia.edu",
+            image: require("../images/Headshots/JonScanlon.jpg"),
+            position: "Secretary"
+        },
+        {
+            name: "Josh Maggiano",
+            email: "urt6qe@virginia.edu",
+            image: require("../images/Headshots/JoshMaggiano.jpg"),
+            position: "Treasurer"
         }
-        // Add more exec objects here
     ];
 
     return (
         <div>
-            {/* <Container style={{ marginBottom: "40vh" }}>
+            <Container style={{ marginBottom: "40vh" }}>
+                {/* <Typography
+                    variant="h4"
+                    style={{
+                        textAlign: "center",
+                        marginBottom: "2rem",
+                        marginTop: "2rem", // Add margin at the top
+                        fontWeight: 600 // Adjust the fontWeight value (e.g., 600 is slightly less bold)
+                    }}
+                >
+                    EXECUTIVE BOARD
+                </Typography> */}
+                <Box my={4}>
+                    <Typography variant="h4"><b>EXECUTIVE BOARD</b></Typography>
+                </Box>
                 <Grid container spacing={2}>
                     {exec.map((person, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Grid item xs={12} sm={6} md={3} key={index}>
                             <PersonCard
                                 name={person.name}
-                                email={person.email}
+                                email={<a href={`mailto:${person.email}`}>{person.email}</a>}
                                 image={person.image}
                                 position={person.position}
                             />
                         </Grid>
                     ))}
-                </Grid>
-            </Container> */}
-            <Container style={{ marginBottom: "40vh" }}>
-                <Grid>
-                    <Typography variant="h4" style={{textAlign:"center", marginTop:"30vh"}}>
-                        Resources Page Coming Soon!
-                    </Typography>
                 </Grid>
             </Container>
         </div>
