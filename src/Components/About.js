@@ -31,33 +31,32 @@ export const About = () => {
 
     return (
         <div>
-            <Container style={{ marginBottom: "40vh" }}>
-                {/* <Typography
-                    variant="h4"
-                    style={{
-                        textAlign: "center",
-                        marginBottom: "2rem",
-                        marginTop: "2rem", // Add margin at the top
-                        fontWeight: 600 // Adjust the fontWeight value (e.g., 600 is slightly less bold)
-                    }}
-                >
-                    EXECUTIVE BOARD
-                </Typography> */}
-                <Box my={4}>
-                    <Typography variant="h4"><b>EXECUTIVE BOARD</b></Typography>
-                </Box>
-                <Grid container spacing={2}>
-                    {exec.map((person, index) => (
-                        <Grid item xs={12} sm={6} md={3} key={index}>
-                            <PersonCard
-                                name={person.name}
-                                email={<a href={`mailto:${person.email}`}>{person.email}</a>}
-                                image={person.image}
-                                position={person.position}
-                            />
-                        </Grid>
-                    ))}
-                </Grid>
+            <Container style={{ marginBottom: "15vh", marginTop: "2vh" }}>
+                <Tabs
+                    value={selectedTab}
+                    onChange={handleTabChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    sx={{
+                        '& > div': {
+                            display: 'flex',
+                            justifyContent: 'center',
+                        },
+                    }}>
+                    <Tab label="Third Year Council">
+
+                    </Tab>
+                    <Tab label="Website Developer Team">
+
+                    </Tab>
+                </Tabs>
+                {tabContent[selectedTab]}
+
+                {/* <Grid>
+                    <Typography variant="h4" style={{textAlign:"center", marginTop:"30vh"}}>
+                        About Page Coming Soon!
+                    </Typography>
+                </Grid> */}
             </Container>
         </div>
     );
