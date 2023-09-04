@@ -119,6 +119,60 @@ export const About = () => {
         }
     ];
 
+    const webDev = [
+        {
+            name: "Michael Kodsi",
+            email: "tdq2kp@virginia.edu",
+            image: require("../images/Headshots/MichaelKodsi.jpeg"),
+            position: "Project Lead"
+        },
+        {
+            name: "Param Patel",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/ParamPatel.jpeg"),
+            position: "Frontend Lead"
+        },
+        {
+            name: "Julian Donald",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
+            position: "Backend Lead"
+        },
+        {
+            name: "Ananya Raam",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
+            position: "UX Designer"
+        },
+    ];
+
+    const webDevLine2 = [
+        {
+            name: "Vishal Kamalakrishnan",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/RyanBowers.jpeg"),
+            position: "Dev Ops and Backend Developer"
+        },
+        {
+            name: "Trisha Gulati",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
+            position: "Frontend Developer"
+        },
+        {
+            name: "Oybek Askarov",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
+            position: "Backend Lead"
+        },
+        {
+            name: "Ananya Raam",
+            email: "jn5hm@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
+            position: "UX Designer"
+        },
+    ];
+
     const tabContent = [
         <div>
             <Box my={4}>
@@ -249,7 +303,23 @@ export const About = () => {
                 ))}
             </Grid>
         </div>,
-        <div></div>,
+        <div>
+            <Box my={4}>
+                <Typography variant="h4"><b>Developer Team</b></Typography>
+            </Box>
+            <Grid container spacing={2}>
+                {webDev.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+        </div>,
     ];
 
     const handleTabChange = (event, newIndex) => {
