@@ -21,7 +21,7 @@ export const About = () => {
         {
             name: "Jonathan Scanlon",
             email: "jbs7ah@virginia.edu",
-            image: require("../images/Headshots/JonScanlon.jpg"),
+            image: require("../images/Headshots/JonScanlon1.jpeg"),
             position: "Secretary"
         },
         {
@@ -128,7 +128,7 @@ export const About = () => {
         },
         {
             name: "Param Patel",
-            email: "example@virginia.edu",
+            email: "jpg5wq@virginia.edu",
             image: require("../images/Headshots/ParamPatel.jpeg"),
             position: "Frontend Lead"
         },
@@ -150,26 +150,26 @@ export const About = () => {
         {
             name: "Vishal Kamalakrishnan",
             email: "example@virginia.edu",
-            image: require("../images/Headshots/RyanBowers.jpeg"),
+            image: require("../images/Headshots/VishalKamalakrishnan.jpeg"),
             position: "Dev Ops and Backend Developer"
         },
         {
-            name: "Trisha Gulati",
+            name: "Oybek Askarov",
+            email: "example@virginia.edu",
+            image: require("../images/Headshots/OybekAskarov.jpeg"),
+            position: "Frontend Developer"
+        },
+        {
+            name: "Hennok Tilahun",
             email: "example@virginia.edu",
             image: require("../images/Headshots/JoshNovick.jpeg"),
             position: "Frontend Developer"
         },
         {
-            name: "Oybek Askarov",
-            email: "example@virginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
-            position: "Backend Lead"
-        },
-        {
-            name: "Ananya Raam",
+            name: "Daniel Farmer",
             email: "jn5hm@virginia.edu",
             image: require("../images/Headshots/JoshNovick.jpeg"),
-            position: "UX Designer"
+            position: "Frontend Developer"
         },
     ];
 
@@ -309,6 +309,19 @@ export const About = () => {
             </Box>
             <Grid container spacing={2}>
                 {webDev.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Grid container spacing={2} style={{ marginTop: "4vh"}}>
+                {webDevLine2.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
                             name={person.name}
