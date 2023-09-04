@@ -134,8 +134,8 @@ export const About = () => {
         },
         {
             name: "Julian Donald",
-            email: "example@virginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
+            email: "jed5gpx@virginia.edu",
+            image: require("../images/Headshots/JulianDonald.png"),
             position: "Backend Lead"
         },
         {
@@ -149,19 +149,19 @@ export const About = () => {
     const webDevLine2 = [
         {
             name: "Vishal Kamalakrishnan",
-            email: "example@virginia.edu",
+            email: "cjq2cw@virginia.edu",
             image: require("../images/Headshots/VishalKamalakrishnan.jpeg"),
-            position: "Dev Ops and Backend Developer"
+            position: "DevOps and Backend Developer"
         },
         {
             name: "Oybek Askarov",
-            email: "example@virginia.edu",
+            email: "cqv7se@virginia.edu",
             image: require("../images/Headshots/OybekAskarov.jpeg"),
             position: "Frontend Developer"
         },
         {
             name: "Hennok Tilahun",
-            email: "example@virginia.edu",
+            email: "bwe6awvirginia.edu",
             image: require("../images/Headshots/JoshNovick.jpeg"),
             position: "Frontend Developer"
         },
