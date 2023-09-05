@@ -7,20 +7,14 @@ import Resources from './Components/Resources'
 import About from './Components/About'
 import Footer from './Components/Footer';
 import React, { useEffect } from 'react';
-import GoogleAnalytics from './Components/GoogleAnalytics';
+import GoogleAnalytics from './Utils/GoogleAnalytics';
+import ReactGA from 'react-ga'
+
+const TRACKING_ID = 'G-ZS2T5CKNB8';
+ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
-  useEffect(() => {
-    // Initialize Google Analytics
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-ZS2T5CKNB8');
-  }, []);
-
   return (
     <div>
       <Router>

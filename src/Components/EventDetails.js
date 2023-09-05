@@ -2,6 +2,7 @@ import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { API } from 'aws-amplify';
+import ReactGA from 'react-ga';
 
 const formatDate = (dateString) => {
     const options = {
@@ -59,6 +60,10 @@ const getParagraphText = (event) => {
 const EventDetails = (props) => {
     const { eventId } = useParams();
     const [event, setEvent] = useState(null);
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
 
     useEffect(() => {
         const fetchEvent = async () => {

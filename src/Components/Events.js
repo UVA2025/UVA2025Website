@@ -4,10 +4,16 @@ import StudentEvents from '../images/student_events.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
 import { API } from 'aws-amplify';
+import ReactGA from 'react-ga';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
+
 
     async function fetchEventData() {
         try {

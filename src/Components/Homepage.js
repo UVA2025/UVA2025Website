@@ -1,8 +1,14 @@
 import { Box, Container, Grid, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SYCBackgroundImage from '../images/TYC_Photo.jpeg';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
 
 const Homepage = () => {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
+
     return (
         <div>
             <Grid container spacing={5} justifyContent="center">

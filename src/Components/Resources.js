@@ -1,6 +1,13 @@
-import { Container, Grid, Typography } from "@mui/material"
+import { Container, Grid, Typography } from "@mui/material";
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
 
 const Resources = () => {
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
+
     return (
         <div>
             <Container style={{ marginBottom: "40vh" }}>
