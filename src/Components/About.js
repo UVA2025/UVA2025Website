@@ -305,9 +305,9 @@ export const About = () => {
         </div>,
         <div>
             <Box my={4}>
-                <Typography variant="h4"><b>Developer Team</b></Typography>
+                <Typography variant="h4"><b>Developer Team Coming Soon!</b></Typography>
             </Box>
-            <Grid container spacing={2}>
+            {/* <Grid container spacing={2}>
                 {webDev.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
@@ -331,7 +331,7 @@ export const About = () => {
                         />
                     </Grid>
                 ))}
-            </Grid>
+            </Grid> */}
         </div>,
     ];
 
