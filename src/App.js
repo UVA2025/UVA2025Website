@@ -6,25 +6,25 @@ import EventDetails from './Components/EventDetails'
 import Resources from './Components/Resources'
 import About from './Components/About'
 import Footer from './Components/Footer';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
+import GoogleAnalytics from './GoogleAnalytics';
 
 
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-ZS2T5CKNB8');
+  }, []);
+
   return (
     <div>
-      <Helmet>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-PREY4E28GE"></script>
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-PREY4E28GE');
-            `}
-          </script>
-        </Helmet>
       <Router>
+      <GoogleAnalytics />
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
