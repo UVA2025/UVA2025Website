@@ -7,7 +7,7 @@ import Resources from './Components/Resources'
 import About from './Components/About'
 import Footer from './Components/Footer';
 import React, { useEffect } from 'react';
-import GoogleAnalytics from './GoogleAnalytics';
+import GoogleAnalytics from './Components/GoogleAnalytics';
 
 
 function App() {
