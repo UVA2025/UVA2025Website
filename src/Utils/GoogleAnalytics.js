@@ -11,7 +11,7 @@ function GoogleAnalytics() {
       window.dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-ZS2T5CKNB8', {
+    gtag('config', 'G-PREY4E28GE', {
       page_path: location.pathname,
     });
   }, [location.pathname]);

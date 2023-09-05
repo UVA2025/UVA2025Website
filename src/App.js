@@ -10,7 +10,7 @@ import React, { useEffect } from 'react';
 import GoogleAnalytics from './Utils/GoogleAnalytics';
 import ReactGA from 'react-ga'
 
-const TRACKING_ID = 'G-ZS2T5CKNB8';
+const TRACKING_ID = "G-PREY4E28GE";
 ReactGA.initialize(TRACKING_ID);
 
 
