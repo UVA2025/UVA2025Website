@@ -162,13 +162,13 @@ export const About = () => {
         {
             name: "Hennok Tilahun",
             email: "bwe6awvirginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
+            image: require("../images/Headshots/HennokTilahun.jpeg"),
             position: "Frontend Developer"
         },
         {
             name: "Daniel Farmer",
             email: "jn5hm@virginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
+            image: require("../images/Headshots/DanielFarmer.jpeg"),
             position: "Frontend Developer"
         },
     ];
@@ -307,7 +307,7 @@ export const About = () => {
             <Box my={4}>
                 <Typography variant="h4"><b>Developer Team Coming Soon!</b></Typography>
             </Box>
-            {/* <Grid container spacing={2}>
+            <Grid container spacing={2}>
                 {webDev.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
@@ -331,7 +331,7 @@ export const About = () => {
                         />
                     </Grid>
                 ))}
-            </Grid> */}
+            </Grid>
         </div>,
     ];
 
