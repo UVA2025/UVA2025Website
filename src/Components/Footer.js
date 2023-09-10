@@ -39,7 +39,7 @@ const Footer = () => {
                             </FooterLink>
                         </Column>
                         <Column>
-                            <FooterLink href="#">Meet the Team</FooterLink>
+                            <FooterLink href="/about">Meet the Team</FooterLink>
                         </Column>
 
                         <Column>

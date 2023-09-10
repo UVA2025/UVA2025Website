@@ -83,7 +83,7 @@ export const About = () => {
     const socialEvents = [
         {
             name: "Chelsea Huffman",
-            email: "tu8mu@virginia.edu",
+            email: "dtu8mu@virginia.edu",
             image: require("../images/Headshots/ChelseaHuffman.jpeg"),
             position: "Social & Events Chair"
         }
@@ -305,7 +305,7 @@ export const About = () => {
         </div>,
         <div>
             <Box my={4}>
-                <Typography variant="h4"><b>Developer Team Coming Soon!</b></Typography>
+                <Typography variant="h4"><b>Developer Team</b></Typography>
             </Box>
             <Grid container spacing={2}>
                 {webDev.map((person, index) => (
