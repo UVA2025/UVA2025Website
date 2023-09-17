@@ -70,7 +70,10 @@ const Events = () => {
             >
                 <div style={{ textAlign: "center", color: "white" }}>
                     <Typography>
-                        <h1 style={{ margin: "0" }}>EVENTS</h1>
+                        <h1 style={{
+                            marginTop: "5vh", marginBottom: "0", paddingRight: "12px",
+                            paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px"
+                        }}>EVENTS</h1>
                     </Typography>
                 </div>
             </div>) : (<div></div>)}

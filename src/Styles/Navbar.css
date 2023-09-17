@@ -1,0 +1,17 @@
+/* Navbar.css */
+
+.nav-link {
+    margin-right: 20px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-link-button {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}

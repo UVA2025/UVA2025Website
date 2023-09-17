@@ -141,7 +141,7 @@ export const About = () => {
         {
             name: "Ananya Raam",
             email: "example@virginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
+            image: require("../images/Headshots/AnanyaRaam.jpeg"),
             position: "UX Designer"
         },
     ];
@@ -171,6 +171,15 @@ export const About = () => {
             image: require("../images/Headshots/DanielFarmer.jpeg"),
             position: "Frontend Developer"
         },
+    ];
+
+    const webDevLine3 = [
+        {
+            name: "Trisha Gulati",
+            email: "rxy3ct@virginia.edu",
+            image: require("../images/Headshots/TrishaGulati.jpeg"),
+            position: "Fullstack Developer"
+        }
     ];
 
     const tabContent = [
@@ -322,6 +331,19 @@ export const About = () => {
 
             <Grid container spacing={2} style={{ marginTop: "4vh"}}>
                 {webDevLine2.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Grid container spacing={2} style={{ marginTop: "4vh"}}>
+                {webDevLine3.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
                             name={person.name}

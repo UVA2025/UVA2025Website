@@ -24,22 +24,16 @@ const Homepage = () => {
                             backgroundRepeat: 'no-repeat',
                             width: '100vw',
                             height: '70vh',
+                            textAlign: 'center'
                         }}
                         className="front-page-image"
                     >
-                        <div
-                            style={{
-                                textAlign: "center",
-                                color: "White"
-                            }}
-                            className="front-page-image">
+                        <div style={{ textAlign: "center", color: "white" }}>
                             <Typography>
-                                <h1>
-                                    WELCOME TO THE UVA CLASS OF 2025 WEBSITE
-                                </h1>
+                                <h1 style={{ marginTop: "5vh", marginBottom: "0", paddingRight: "12px",
+                                paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px" }}>WELCOME TO THE UVA CLASS OF 2025 WEBSITE</h1>
                             </Typography>
                         </div>
-                        {/* Your content goes here */}
                     </div>
                 </Grid>
                 <Grid item xs={1} sm={2} md={2}>
