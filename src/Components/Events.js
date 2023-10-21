@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import { Container, Grid, Box, Divider } from '@mui/material';
+import { Container, Grid, Box, Divider, Tabs, Tab } from '@mui/material';
 import StudentEvents from '../images/student_events.jpeg';
 import EventCard from './EventCard';
 import React, { useEffect, useState } from 'react';
@@ -9,11 +9,11 @@ import ReactGA from 'react-ga';
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [selectedTab, setSelectedTab] = useState(0);
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
     }, []);
-
 
     async function fetchEventData() {
         try {
@@ -28,6 +28,10 @@ const Events = () => {
     useEffect(() => {
         fetchEventData();
     }, []);
+
+    const handleTabChange = (event, newIndex) => {
+        setSelectedTab(newIndex);
+    };
 
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
@@ -54,6 +58,104 @@ const Events = () => {
 
         return filteredEventItems.length > 0;
     });
+
+    const centeredTextStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '20vh', // You can adjust the height as needed
+    };
+
+    const now = new Date();
+
+    const futureEvents = events.filter((event) => {
+        const eventDate = new Date(event.dateAndTime);
+        return eventDate > now;
+    });
+    
+    const priorEvents = events.filter((event) => {
+        const eventDate = new Date(event.dateAndTime);
+        return eventDate < now;
+    });
+    
+    const tabContent = [
+        <div>
+            {futureEvents.length > 0 ? (
+                filteredMonths.map((month, index) => {
+                    const filteredEventItems = futureEvents.filter((event) => {
+                        const isoDateString = event.dateAndTime;
+                        const dateObject = new Date(isoDateString);
+                        return dateObject
+                            .toLocaleString("default", { month: "long" })
+                            .toUpperCase()
+                            .includes(month);
+                    });
+    
+                    if (filteredEventItems.length > 0) {
+                        return (
+                            <div key={index}>
+                                <Box my={4}>
+                                    <Typography variant="h4"><b>{month}</b></Typography>
+                                </Box>
+                                <Grid container spacing={2}>
+                                    {filteredEventItems.map((event, eventIndex) => (
+                                        <Grid item xs={12} sm={6} key={eventIndex}>
+                                            <EventCard event={event} />
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                                <br></br>
+                                <br></br>
+                                <Divider variant="middle" />
+                            </div>
+                        );
+                    }
+                    return null;
+                })
+            ) : (
+                <div style={centeredTextStyle}>
+                <Typography variant="h4">
+                    Check back later for future events
+                </Typography>
+            </div>
+            )}
+        </div>,
+        <div>
+            {filteredMonths.map((month, index) => {
+                const filteredEventItems = priorEvents.filter((event) => {
+                    const isoDateString = event.dateAndTime;
+                    const dateObject = new Date(isoDateString);
+                    return dateObject
+                        .toLocaleString("default", { month: "long" })
+                        .toUpperCase()
+                        .includes(month);
+                });
+    
+                if (filteredEventItems.length > 0) {
+                    return (
+                        <div key={index}>
+                            <Box my={4}>
+                                <Typography variant="h4"><b>{month}</b></Typography>
+                            </Box>
+                            <Grid container spacing={2}>
+                                {filteredEventItems.map((event, eventIndex) => (
+                                    <Grid item xs={12} sm={6} key={eventIndex}>
+                                        <EventCard event={event} />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                            <br></br>
+                            <br></br>
+                            <Divider variant="middle" />
+                        </div>
+                    );
+                }
+                return null;
+            })}
+        </div>,
+    ];
+    
 
     return (
         <div>
@@ -85,35 +187,26 @@ const Events = () => {
                     </Typography>
                 ) : (
                     <>
-                        {filteredMonths.map((month, index) => {
-                            const filteredEventItems = events.filter((event) => {
-                                const isoDateString = event.dateAndTime;
-                                const dateObject = new Date(isoDateString);
+                        <Tabs
+                            value={selectedTab}
+                            onChange={handleTabChange}
+                            indicatorColor="primary"
+                            textColor="primary"
+                            sx={{
+                                '& > div': {
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                },
+                            }}>
+                            <Tab label="Upcoming Events">
 
-                                return dateObject
-                                    .toLocaleString("default", { month: "long" })
-                                    .toUpperCase()
-                                    .includes(month);
-                            });
+                            </Tab>
+                            <Tab label="Prior Events">
 
-                            return (
-                                <div key={index}>
-                                    <Box my={4}>
-                                        <Typography variant="h4"><b>{month}</b></Typography>
-                                    </Box>
-                                    <Grid container spacing={2}>
-                                        {filteredEventItems.map((event, eventIndex) => (
-                                            <Grid item xs={12} sm={6} key={eventIndex}>
-                                                <EventCard event={event} />
-                                            </Grid>
-                                        ))}
-                                    </Grid>
-                                    <br></br>
-                                    <br></br>
-                                    <Divider variant="middle" />
-                                </div>
-                            );
-                        })}
+                            </Tab>
+                        </Tabs>
+                        {tabContent[selectedTab]}
+
                     </>
                 )}
             </Container>

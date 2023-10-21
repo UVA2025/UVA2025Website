@@ -140,7 +140,7 @@ export const About = () => {
         },
         {
             name: "Ananya Raam",
-            email: "example@virginia.edu",
+            email: "sfg6xt@virginia.edu",
             image: require("../images/Headshots/AnanyaRaam.jpeg"),
             position: "UX Designer"
         },
