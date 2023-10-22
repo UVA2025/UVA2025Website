@@ -49,9 +49,9 @@ const Navbar = () => {
                                 </Button>
                             </Link>
 
-                            <Link to="/resources" className="navbar-link-button">
-                                <Button variant="text" color={location.pathname === '/resources' ? 'secondary' : 'inherit'} className={location.pathname === '/resources' ? 'active-link-button' : ''}>
-                                    RESOURCES
+                            <Link to="/committees" className="navbar-link-button">
+                                <Button variant="text" color={location.pathname === '/committees' ? 'secondary' : 'inherit'} className={location.pathname === '/committees' ? 'active-link-button' : ''}>
+                                    COMMITTEES
                                 </Button>
                             </Link>
                         </div>

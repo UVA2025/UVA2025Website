@@ -2,7 +2,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const Resources = () => {
+const Committees = () => {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -21,4 +21,4 @@ const Resources = () => {
     )
 
 }
-export default Resources
+export default Committees

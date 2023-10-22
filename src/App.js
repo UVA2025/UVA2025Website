@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './Components/Homepage'
 import Events from './Components/Events'
 import EventDetails from './Components/EventDetails'
-import Resources from './Components/Resources'
+import Committees from './Components/Committees'
 import About from './Components/About'
 import Footer from './Components/Footer';
 import React, { useEffect } from 'react';
@@ -25,7 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route exact path="/events/:eventId" element={<EventDetails />} />
-          <Route path="/resources" element={<Resources />} />
+          <Route path="/committees" element={<Committees />} />
         </Routes>
         <Footer />
       </Router>
