@@ -84,7 +84,7 @@ const Navbar = () => {
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
                                         <Link to="/resource/dei" style={{ textDecoration: "none", color: "inherit" }}>
-                                            DEI
+                                            Diversity Equity & Inclusion
                                         </Link>
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
