@@ -12,10 +12,9 @@ import ReactGA from 'react-ga'
 import ACD from './Components/Resources/acd';
 import SocialEvents from './Components/Resources/socialEvents';
 import DEI from './Components/Resources/dei';
-import RingCeremony from './Components/Resources/ringCeremony';
+import ThirdYearCeremony from './Components/Resources/thirdYearCeremony';
 import Marketing from './Components/Resources/marketing';
 import ServiceWellness from './Components/Resources/serviceWellness';
-import ThirdYearCeremony from './Components/Resources/thirdYearCeremony';
 
 const TRACKING_ID = "G-PREY4E28GE";
 ReactGA.initialize(TRACKING_ID);
@@ -37,7 +36,6 @@ function App() {
           <Route path="/resource/acd" element={<ACD />} />
           <Route path="/resource/dei" element={<DEI />} />
           <Route path="/resource/marketing" element={<Marketing />} />
-          <Route path="/resource/ring-ceremony" element={<RingCeremony />} />
           <Route path="/resource/service-wellness" element={<ServiceWellness />} />
           <Route path="/resource/social-events" element={<SocialEvents />} />
           <Route path="/resource/third-year-ceremony" element={<ThirdYearCeremony />} />

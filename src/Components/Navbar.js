@@ -92,11 +92,7 @@ const Navbar = () => {
                                             Marketing
                                         </Link>
                                     </MenuItem>
-                                    <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/ring-ceremony" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Ring Ceremony
-                                        </Link>
-                                    </MenuItem>
+                                    
                                     <MenuItem onClick={handleMenuClose}>
                                         <Link to="/resource/service-wellness" style={{ textDecoration: "none", color: "inherit" }}>
                                             Service & Wellness
