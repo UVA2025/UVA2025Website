@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Button } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SYCBackgroundImage from '../images/TYC_Photo.jpeg';
 import ReactGA from 'react-ga';
@@ -13,7 +13,7 @@ const Homepage = () => {
         <div>
             <Grid container spacing={5} justifyContent="center">
                 <Grid item xs={12} md={12} lg={12} container
-                    wrap="nowrap" // --> add this line to disable wrap
+                    wrap="nowrap"
                     sx={{ overflow: "auto" }}>
 
                     <div
