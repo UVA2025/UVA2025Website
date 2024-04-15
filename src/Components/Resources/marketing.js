@@ -37,15 +37,16 @@ const Marketing = () => {
                         Who Are We?
                     </Typography>
                     <ul>
-                        <li>Ethan Johnson - Co Chair</li>
                         <li>Sammy Vinh - Co Chair</li>
-                        <li>Willoughby Hardesty - Third Year Ceremony Representative</li>
-                        <li>Anran Zhao - Social Committee Representative</li>
+                        <li>Ethan Johnson - Co Chair</li>
+                        <li>Willoughby Hardesty</li>
                         <li>Kiera Chambers - Social Committee Representative</li>
                         <li>Leighton Klevana - Wellness and Service Representative</li>
+                        <li>Anran Zhao - Social Committee Representative</li>
                         <li>Nick Porter - Wellness and Service Representative</li>
                         <li>Matthew Moore - Academic and Career Development Representative</li>
-                        <li>Shruthi Solaiappan - Diversity, Equity, and Inclusion Representative</li>
+                        <li>Madi Asher - Academic and Career Development Representative</li>
+                        <li>Riley McNeill - Diversity Equity and Inclusion Representative</li>
                     </ul>
 
                     <Typography variant="h6" gutterBottom>

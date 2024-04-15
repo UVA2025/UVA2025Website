@@ -39,13 +39,13 @@ const ACD = () => {
                         <li>Ezra Attisso - Co-Chair</li>
                         <li>Ben Ueltschey - Co-Chair</li>
                         <li>Michael Kodsi - Head Website Development</li>
-                        <li>Meagan Bass</li>
-                        <li>Maddie Cahill</li>
                         <li>Trisha Gulati</li>
+                        <li>Justin Wachtel</li>
+                        <li>Scott Wallace</li>
                         <li>Shreya Malani</li>
                         <li>Fiona O’Connor</li>
-                        <li>Scott Wallace</li>
-                        <li>Justin Wachtel</li>
+                        <li>Kate McLaughlin</li>
+                        <li>Linh Vu</li>
                     </ul>
 
                     <Typography variant="h6" gutterBottom>

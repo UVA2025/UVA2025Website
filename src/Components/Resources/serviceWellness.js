@@ -37,15 +37,15 @@ const ServiceWellness = () => {
                         Who Are We?
                     </Typography>
                     <ul>
-                        <li>Josh Novick - Co-Chair</li>
                         <li>Ryan Bowers - Co-Chair</li>
+                        <li>Kat Winters - Co-Chair</li>
                         <li>Claire Butorac</li>
                         <li>Sarah Dowd</li>
                         <li>Ellie Cowan</li>
-                        <li>Kat Winters</li>
                         <li>Emily Pitts</li>
-                        <li>Pablo Calvo</li>
                         <li>Abbey Foley</li>
+                        <li>Faith Crosley</li>
+                        <li>Akanksha Munshi</li>
                     </ul>
 
                     <Typography variant="h6" gutterBottom>

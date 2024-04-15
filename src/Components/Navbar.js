@@ -60,6 +60,12 @@ const Navbar = () => {
                                 </Button>
                             </Link>
 
+                            <Link to="/merch" className="navbar-link-button">
+                                <Button variant="text" color={location.pathname === '/merch' ? 'secondary' : 'inherit'} className={location.pathname === '/merch' ? 'active-link-button' : ''}>
+                                    MERCH
+                                </Button>
+                            </Link>
+
                             <div className="navbar-link-button">
                                 <Button
                                     variant="text"

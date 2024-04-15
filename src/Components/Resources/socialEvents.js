@@ -37,11 +37,11 @@ const SocialEvents = () => {
                         Who Are We?
                     </Typography>
                     <ul>
-                        <li>Chelsea Huffman - Chair</li>
-                        <li>Erin McGahan</li>
+                        <li>Sophia Ditty - Chair</li>
+                        <li>Dana Jou Alban - Chair</li>
                         <li>Jessie Lewis</li>
                         <li>Spencer Henske</li>
-                        <li>Sophie Atkinson</li>
+                        <li>Sophie Atkinson</li> 
                         <li>Amelia Brady</li>
                         <li>Will Clemens</li>
                         <li>Colin Halligan</li>
@@ -49,6 +49,7 @@ const SocialEvents = () => {
                         <li>Aramis Rolly</li>
                         <li>Sean Thiel</li>
                         <li>Sarah Rose Wilkinson</li>
+                        <li>Paulo Maia</li>
                     </ul>
 
                     <Typography variant="h6" gutterBottom>

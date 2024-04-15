@@ -15,6 +15,7 @@ import DEI from './Components/Resources/dei';
 import ThirdYearCeremony from './Components/Resources/thirdYearCeremony';
 import Marketing from './Components/Resources/marketing';
 import ServiceWellness from './Components/Resources/serviceWellness';
+import Merch from './Components/Merch';
 
 const TRACKING_ID = "G-PREY4E28GE";
 ReactGA.initialize(TRACKING_ID);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route exact path="/events/:eventId" element={<EventDetails />} />
+          <Route path="/merch" element={<Merch />} />
           <Route path="/resources" element={<Committees />} />
 
           <Route path="/resource/acd" element={<ACD />} />

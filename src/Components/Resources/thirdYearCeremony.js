@@ -26,7 +26,7 @@ const ThirdYearCeremony = () => {
     <div>
       <br></br>
       <div style={styles.paperContainer}>
-        <Paper elevation={3} style={styles.paper}>
+        {/* <Paper elevation={3} style={styles.paper}>
           <Typography variant="h5" gutterBottom>
             What Does the Third Year Council Ceremony Committee Do?
           </Typography>
@@ -62,7 +62,7 @@ const ThirdYearCeremony = () => {
           <Typography>
             To stay up to date on class events, follow our Instagram: <a href="https://www.instagram.com/classof2025uva/" target="_blank" rel="noopener noreferrer">@classof2025uva</a>
           </Typography>
-        </Paper>
+        </Paper> */}
         <br></br>
         <Paper elevation={3} style={styles.paper}>
           <Typography variant="h5" gutterBottom>

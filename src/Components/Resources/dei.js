@@ -38,13 +38,11 @@ const DEI = () => {
                     </Typography>
                     <ul>
                         <li>Onyii Eze - Chair</li>
-                        <li>Jenna Sleiman</li>
-                        <li>Julia DaSilva</li>
+                        <li>James Siegener</li>
                         <li>Jonathon Scanlon</li>
                         <li>Keya Pokhriyal</li>
-                        <li>James Siegener</li>
-                        <li>Kayla Feliciano</li>
                         <li>Meg Annamaneni</li>
+                        <li>Chlope Timmons</li>
                     </ul>
 
                     <Typography variant="h6" gutterBottom>
