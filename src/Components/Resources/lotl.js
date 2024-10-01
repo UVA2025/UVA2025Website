@@ -2,7 +2,7 @@ import { Typography, Paper } from "@mui/material";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const Marketing = () => {
+const Lotl = () => {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -27,19 +27,18 @@ const Marketing = () => {
             <div style={styles.paperContainer}>
                 <Paper elevation={3} style={styles.paper}>
                     <Typography variant="h5" gutterBottom>
-                        What does the Fourth Year Trustees Marketing Committee do?
+                        What does the Lighting of the Lawn (LOTL) Committee do?
                     </Typography>
                     <Typography paragraph>
-                        As a committee, we help to distribute Fourth Year Trustees event information to the Class of 2025. We distribute this information through our instagram, newsletters, and more. We are also the ones responsible for class merchandise so if you have any ideas that you would like to see come to life, feel free to DM our instagram page!
+                        The Lighting of the Lawn (LOTL) Committee is responsible for planning, organizing, and executing one of the most anticipated annual events on Grounds. Fully student-led, the committee works to create an event that emphasizes the power of community, reflection, and celebration at the end of the Fall semester. The event includes performances from a cappella, dance, and other student groups, speeches from selected community and University members, and a light show on the Rotunda. The committee oversees everything from grant applications to light hanging to and vendor communication, ensuring a memorable experience for students, faculty, and the broader UVA community.                    
                     </Typography>
-
                     <Typography variant="h6" gutterBottom>
-                        Who should you contact if you have any questions about what Marketing does?
+                        Who should you contact if you have any questions about what LOTL does?
                     </Typography>
                     <Typography>
                         <ul>
-                            <li>Ethan Johnson - <a href="mailto:cyt3cb@virginia.edu">cyt3cb@virginia.edu</a></li>
-                            <li>Sammy Vinh - <a href="mailto:gak5ux@virginia.edu">gak5ux@virginia.edu</a></li>
+                            <li>Chelsea Huffman - <a href="mailto:dtu8mu@virginia.edu">dtu8mu@virginia.edu</a></li>
+                            <li>Riley McNeil - <a href="mailto:mqt3uz@virginia.edu">mqt3uz@virginia.edu</a></li>
                         </ul>
                     </Typography>
 
@@ -57,4 +56,4 @@ const Marketing = () => {
     )
 
 }
-export default Marketing
+export default Lotl

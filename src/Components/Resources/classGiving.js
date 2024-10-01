@@ -2,7 +2,7 @@ import { Typography, Paper } from "@mui/material";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const Marketing = () => {
+const ClassGiving = () => {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -27,19 +27,19 @@ const Marketing = () => {
             <div style={styles.paperContainer}>
                 <Paper elevation={3} style={styles.paper}>
                     <Typography variant="h5" gutterBottom>
-                        What does the Fourth Year Trustees Marketing Committee do?
+                        What does the Fourth Year Trustees Class Giving Committee do?
                     </Typography>
                     <Typography paragraph>
-                        As a committee, we help to distribute Fourth Year Trustees event information to the Class of 2025. We distribute this information through our instagram, newsletters, and more. We are also the ones responsible for class merchandise so if you have any ideas that you would like to see come to life, feel free to DM our instagram page!
+                        The Class Giving Campaign is an annual tradition that empowers graduating students to support organizations that shaped our UVA experience. Your gift ensure future students enjoy the same opportunities we have during out four years at UVA
                     </Typography>
 
                     <Typography variant="h6" gutterBottom>
-                        Who should you contact if you have any questions about what Marketing does?
+                        Who should you contact if you have any questions about what Class Giving does?
                     </Typography>
                     <Typography>
                         <ul>
-                            <li>Ethan Johnson - <a href="mailto:cyt3cb@virginia.edu">cyt3cb@virginia.edu</a></li>
-                            <li>Sammy Vinh - <a href="mailto:gak5ux@virginia.edu">gak5ux@virginia.edu</a></li>
+                            <li>Akanksha Munshi - <a href="mailto:tvw8cd@virginia.edu">tvw8cd@virginia.edu</a></li>
+                            <li>Josh Maggiano - <a href="mailto:urt6qe@virginia.edu">urt6qe@virginia.edu</a></li>
                         </ul>
                     </Typography>
 
@@ -57,4 +57,4 @@ const Marketing = () => {
     )
 
 }
-export default Marketing
+export default ClassGiving

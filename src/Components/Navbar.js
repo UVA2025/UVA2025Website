@@ -78,24 +78,18 @@ const Navbar = () => {
                                     onClose={handleMenuClose}
                                 >
                                     <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/acd" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Academic and Career Development
+                                        <Link to="/resource/graduation" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Graduation
                                         </Link>
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/dei" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Diversity Equity & Inclusion
+                                        <Link to="/resource/class-giving" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Class Giving
                                         </Link>
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/marketing" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Marketing
-                                        </Link>
-                                    </MenuItem>
-                                    
-                                    <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/service-wellness" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Service & Wellness
+                                        <Link to="/resource/post-grad-transition" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Post Grad Transition
                                         </Link>
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
@@ -104,10 +98,31 @@ const Navbar = () => {
                                         </Link>
                                     </MenuItem>
                                     <MenuItem onClick={handleMenuClose}>
-                                        <Link to="/resource/third-year-ceremony" style={{ textDecoration: "none", color: "inherit" }}>
-                                            Third Year Ceremony
+                                        <Link to="/resource/marketing" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Marketing
                                         </Link>
                                     </MenuItem>
+                                    <MenuItem onClick={handleMenuClose}>
+                                        <Link to="/resource/service-wellness" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Service & Wellness
+                                        </Link>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleMenuClose}>
+                                        <Link to="/resource/dei" style={{ textDecoration: "none", color: "inherit" }}>
+                                            Diversity Equity & Inclusion
+                                        </Link>
+                                    </MenuItem>
+                                    <MenuItem onClick={handleMenuClose}>
+                                        <Link to="/resource/lotl" style={{ textDecoration: "none", color: "inherit" }}>
+                                            LOTL
+                                        </Link>
+                                    </MenuItem>
+                                   
+
+                                    
+                                    
+                                    
+                                    
                                 </Menu>
                             </div>
                         </div>

@@ -2,7 +2,7 @@ import { Typography, Paper } from "@mui/material";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const Marketing = () => {
+const Graduation = () => {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -27,19 +27,17 @@ const Marketing = () => {
             <div style={styles.paperContainer}>
                 <Paper elevation={3} style={styles.paper}>
                     <Typography variant="h5" gutterBottom>
-                        What does the Fourth Year Trustees Marketing Committee do?
+                        What does the Graduation Committee do?
                     </Typography>
                     <Typography paragraph>
-                        As a committee, we help to distribute Fourth Year Trustees event information to the Class of 2025. We distribute this information through our instagram, newsletters, and more. We are also the ones responsible for class merchandise so if you have any ideas that you would like to see come to life, feel free to DM our instagram page!
+                    The Graduation Committee plans and orchestrates the weekend of Final Exercises for the Class of 2025. Our committee is responsible for finding and selecting the Valediction Speaker, facilitating the Valediciton (awards) Ceremony, planning and throwing the Class Party, and organizing volunteers. While the culmination of our work takes place over the course of three days, we work diligently throughout the year to make Finals Weekend as enjoyable and memorable as possible to celebrate the end of our undergraduate careers. 
                     </Typography>
-
                     <Typography variant="h6" gutterBottom>
-                        Who should you contact if you have any questions about what Marketing does?
+                        Who should you contact if you have any questions about what Graduation does?
                     </Typography>
                     <Typography>
                         <ul>
-                            <li>Ethan Johnson - <a href="mailto:cyt3cb@virginia.edu">cyt3cb@virginia.edu</a></li>
-                            <li>Sammy Vinh - <a href="mailto:gak5ux@virginia.edu">gak5ux@virginia.edu</a></li>
+                            <li>Ben Ueltschey - <a href="mailto:zgd7wr@virginia.edu">zgd7wr@virginia.edu</a></li>
                         </ul>
                     </Typography>
 
@@ -57,4 +55,4 @@ const Marketing = () => {
     )
 
 }
-export default Marketing
+export default Graduation

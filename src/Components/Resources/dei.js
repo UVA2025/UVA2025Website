@@ -34,23 +34,9 @@ const DEI = () => {
                     </Typography>
 
                     <Typography variant="h6" gutterBottom>
-                        Who Are We?
-                    </Typography>
-                    <ul>
-                        <li>Onyii Eze - Chair</li>
-                        <li>Jenna Sleiman</li>
-                        <li>Julia DaSilva</li>
-                        <li>Jonathon Scanlon</li>
-                        <li>Keya Pokhriyal</li>
-                        <li>James Siegener</li>
-                        <li>Kayla Feliciano</li>
-                        <li>Meg Annamaneni</li>
-                    </ul>
-
-                    <Typography variant="h6" gutterBottom>
                         What type of events does DEI host?
                     </Typography>
-                    <Typography>
+                    <Typography paragraph>
                         DEI holds all types of events in collaboration with cultural organizations around grounds and groups which encourage diversity, equity, and inclusion.
                     </Typography>
 
@@ -58,7 +44,7 @@ const DEI = () => {
                         How can my organization get involved with TYC DEI?
                     </Typography>
                     <Typography>
-                        If your organization has an idea for an event but needs sponsorship to make it happen, you can email Onyii Eze at <a href="mailto:jsx6jb@virginia.edu">jsx6jb@virginia.edu</a> for support!
+                        If your organization has an idea for an event but needs sponsorship to make it happen, you can email Onyii Eze at <a href="mailto:jsx6jb@virginia.edu">jsx6jb@virginia.edu</a> or Jenna Sleiman at <a href="mailto:bxm2pe@virginia.edu">bxm2pe@virginia.edu</a> for support!
                     </Typography>
                 </Paper>
 

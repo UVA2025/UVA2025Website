@@ -31,7 +31,7 @@ const Homepage = () => {
                         <div style={{ textAlign: "center", color: "white" }}>
                             <Typography>
                                 <h1 style={{ marginTop: "5vh", marginBottom: "0", paddingRight: "12px",
-                                paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px" }}>WELCOME TO THE UVA CLASS OF 2025 WEBSITE</h1>
+                                paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px" }}>FOURTH YEAR TRUSTEES</h1>
                             </Typography>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Homepage = () => {
                         display="in-line"
                         sx={{ justifyContent: "center" }}      >
                         <Typography><h1 style={{ textAlign: "right" }}>HOO WE ARE</h1></Typography>
-                        <Typography><p style={{ textAlign: "right" }}>Welcome to the official website for the Class of 2025 Third Year Council! Check out upcoming events, resources, or learn more about our goal and various committees.</p></Typography>
+                        <Typography><p style={{ textAlign: "right" }}>Welcome to the official website for the Class of 2025 Fourth Year Trustees! Check out upcoming events, resources, or learn more about our goal and various committees.</p></Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={10} sm={4} md={4} justifyContent="center">

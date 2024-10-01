@@ -25,75 +25,81 @@ export const About = () => {
             position: "Secretary"
         },
         {
-            name: "Josh Maggiano",
-            email: "urt6qe@virginia.edu",
-            image: require("../images/Headshots/JoshMaggiano.jpg"),
+            name: "Josh Novick",
+            email: "jn5hm@virginia.edu",
+            image: require("../images/Headshots/JoshNovick.jpeg"),
             position: "Treasurer"
         }
     ];
 
     const bonding = [
         {
-            name: "Erin McGahan",
-            email: "zrz4gw@virginia.edu",
-            image: require("../images/Headshots/ErinMcGahan.jpeg"),
+            name: "Colin Halligan",
+            email: "haa9vs@virginia.edu",
+            image: require("../images/Headshots/ColinHalligan.jpg"),
             position: "Bonding Chair"
         },
         {
-            name: "Sophia Palumbo",
-            email: "rwy5er@virginia.edu",
-            image: require("../images/Headshots/SophiaPalumbo.jpeg"),
+            name: "Kiera Chambers",
+            email: "tsu6bd@virginia.edu",
+            image: require("../images/Headshots/KieraChambers.jpg"),
             position: "Bonding Chair"
         }
     ];
 
-    const acd = [
-        {
-            name: "Ezra Attisso",
-            email: "hdg6zf@virginia.edu",
-            image: require("../images/Headshots/EzraAttisso.jpeg"),
-            position: "ACD Chair"
-        },
+    const grad = [
         {
             name: "Ben Ueltschey",
             email: "zgd7wr@virginia.edu",
             image: require("../images/Headshots/BenUeltschey.jpeg"),
-            position: "ACD Chair"
+            position: "Graduation Chair"
         }
     ];
 
-    const dei = [
+    const post_grad = [
         {
-            name: "Onyii Eze",
-            email: "sx6jb@virginia.edu",
-            image: require("../images/Headshots/OnyiiEze.jpeg"),
-            position: "DEI Chair"
+            name: "Maddie Cahill",
+            email: "pcm8vy@virginia.edu",
+            image: require("../images/Headshots/MaddieCahill.jpg"),
+            position: "Post Grad Transition Chair"
         }
     ];
 
-    const ceremony = [
+    const class_giving = [
         {
-            name: "Sophia Ditty",
-            email: "wmn8zf@virginia.edu",
-            image: require("../images/Headshots/SophiaDitty.jpeg"),
-            position: "Ceremony Chair"
+            name: "Akanksha Munshi",
+            email: "tvw8cd@virginia.edu",
+            image: require("../images/Headshots/AkankshaMunshi.jpg"),
+            position: "Class Giving Chair"
+        },
+        {
+            name: "Josh Maggiano",
+            email: "urt6qe@virginia.edu",
+            image: require("../images/Headshots/JoshMaggiano.jpg"),
+            position: "Class Giving Chair"
         }
     ];
 
     const socialEvents = [
         {
-            name: "Chelsea Huffman",
-            email: "dtu8mu@virginia.edu",
-            image: require("../images/Headshots/ChelseaHuffman.jpeg"),
+            name: "Jessie Lewis",
+            email: "feq4wc@virginia.edu",
+            image: require("../images/Headshots/JessieLewis.jpg"),
             position: "Social & Events Chair"
-        }
+        },
+        {
+            name: "Erin McGahan",
+            email: "zrz4gw@virginia.edu",
+            image: require("../images/Headshots/ErinMcGahan.jpeg"),
+            position: "Social & Events Chair"
+        },
     ];
 
     const marketing = [
         {
             name: "Ethan Johnson",
             email: "cyt3cb@virginia.edu",
-            image: require("../images/Headshots/EthanJohnson.jpeg"),
+            image: require("../images/Headshots/EthanJohnson.jpg"),
             position: "Marketing Co-Chair"
         },
         {
@@ -106,18 +112,48 @@ export const About = () => {
 
     const serviceWellness = [
         {
-            name: "Ryan Bowers",
-            email: "qtn4wn@virginia.edu",
-            image: require("../images/Headshots/RyanBowers.jpeg"),
+            name: "Max Morrish",
+            email: "jrz9cd@virginia.edu",
+            image: require("../images/Headshots/MaxMorrish.jpg"),
             position: "Service/Wellness Chair"
         },
         {
-            name: "Josh Novick",
-            email: "jn5hm@virginia.edu",
-            image: require("../images/Headshots/JoshNovick.jpeg"),
+            name: "Kat Winters",
+            email: "txz5qx@virginia.edu",
+            image: require("../images/Headshots/KatWinters.jpg"),
             position: "Service/Wellness Chair"
         }
     ];
+
+    const dei = [
+        {
+            name: "Onyii Eze",
+            email: "sx6jb@virginia.edu",
+            image: require("../images/Headshots/OnyiiEze.jpeg"),
+            position: "DEI Chair"
+        },
+        {
+            name: "Jenna Sleiman",
+            email: "bxm2pe@virginia.edu",
+            image: require("../images/Headshots/JennaSleiman.jpg"),
+            position: "DEI Chair"
+        }
+    ];
+
+    const lotl = [
+        {
+            name: "Chelsea Huffman",
+            email: "dtu8mu@virginia.edu",
+            image: require("../images/Headshots/ChelseaHuffman.jpg"),
+            position: "LOTL Chair"
+        },
+        {
+            name: "Riley McNeil",
+            email: "mqt3uz@virginia.edu",
+            image: require("../images/Headshots/RileyMcNeil.jpg"),
+            position: "LOTL Chair"
+        }
+    ]
 
     const webDev = [
         {
@@ -201,22 +237,6 @@ export const About = () => {
             </Grid>
 
             <Box my={4}>
-                <Typography variant="h4"><b>Academic and Career Development</b></Typography>
-            </Box>
-            <Grid container spacing={2}>
-                {acd.map((person, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
-                        <PersonCard
-                            name={person.name}
-                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
-                            image={person.image}
-                            position={person.position}
-                        />
-                    </Grid>
-                ))}
-            </Grid>
-
-            <Box my={4}>
                 <Typography variant="h4"><b>Bonding</b></Typography>
             </Box>
             <Grid container spacing={2}>
@@ -233,10 +253,58 @@ export const About = () => {
             </Grid>
 
             <Box my={4}>
-                <Typography variant="h4"><b>DEI</b></Typography>
+                <Typography variant="h4"><b>Graduation</b></Typography>
             </Box>
             <Grid container spacing={2}>
-                {dei.map((person, index) => (
+                {grad.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Box my={4}>
+                <Typography variant="h4"><b>Post Grad Transition</b></Typography>
+            </Box>
+            <Grid container spacing={2}>
+                {post_grad.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Box my={4}>
+                <Typography variant="h4"><b>Class Giving</b></Typography>
+            </Box>
+            <Grid container spacing={2}>
+                {class_giving.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Box my={4}>
+                <Typography variant="h4"><b>Social & Events</b></Typography>
+            </Box>
+            <Grid container spacing={2}>
+                {socialEvents.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
                             name={person.name}
@@ -265,22 +333,6 @@ export const About = () => {
             </Grid>
 
             <Box my={4}>
-                <Typography variant="h4"><b>Ring Ceremony</b></Typography>
-            </Box>
-            <Grid container spacing={2}>
-                {ceremony.map((person, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
-                        <PersonCard
-                            name={person.name}
-                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
-                            image={person.image}
-                            position={person.position}
-                        />
-                    </Grid>
-                ))}
-            </Grid>
-
-            <Box my={4}>
                 <Typography variant="h4"><b>Service / Wellness</b></Typography>
             </Box>
             <Grid container spacing={2}>
@@ -297,10 +349,26 @@ export const About = () => {
             </Grid>
 
             <Box my={4}>
-                <Typography variant="h4"><b>Social / Events</b></Typography>
+                <Typography variant="h4"><b>DEI</b></Typography>
             </Box>
             <Grid container spacing={2}>
-                {socialEvents.map((person, index) => (
+                {dei.map((person, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <PersonCard
+                            name={person.name}
+                            email={<a href={`mailto:${person.email}`}>{person.email}</a>}
+                            image={person.image}
+                            position={person.position}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Box my={4}>
+                <Typography variant="h4"><b>LOTL</b></Typography>
+            </Box>
+            <Grid container spacing={2}>
+                {lotl.map((person, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <PersonCard
                             name={person.name}
@@ -375,7 +443,7 @@ export const About = () => {
                             justifyContent: 'center',
                         },
                     }}>
-                    <Tab label="Third Year Council">
+                    <Tab label="Fourth Year Trustees">
 
                     </Tab>
                     <Tab label="Website Developer Team">

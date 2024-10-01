@@ -2,7 +2,7 @@ import { Typography, Paper } from "@mui/material";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const Marketing = () => {
+const PostGrad = () => {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -27,19 +27,18 @@ const Marketing = () => {
             <div style={styles.paperContainer}>
                 <Paper elevation={3} style={styles.paper}>
                     <Typography variant="h5" gutterBottom>
-                        What does the Fourth Year Trustees Marketing Committee do?
+                        What does the Fourth Year Trustees Post Grad Transition Committee do?
                     </Typography>
                     <Typography paragraph>
-                        As a committee, we help to distribute Fourth Year Trustees event information to the Class of 2025. We distribute this information through our instagram, newsletters, and more. We are also the ones responsible for class merchandise so if you have any ideas that you would like to see come to life, feel free to DM our instagram page!
+                        The Post-Grad Transition Committee plays a vital role in supporting students as they transition into the post-graduate environment. By organizing events focused on job application preparation, networking, and city-specific resources, this committee empowers graduates to confidently navigate their next steps. The Post-Grad Transition Committee also plans events and promotes resources to help the Class of 2025 foster connections within their future cities, ensuring a smoother transition into post-college life. 
                     </Typography>
 
                     <Typography variant="h6" gutterBottom>
-                        Who should you contact if you have any questions about what Marketing does?
+                        Who should you contact if you have any questions about what Post Grad Transition does?
                     </Typography>
                     <Typography>
                         <ul>
-                            <li>Ethan Johnson - <a href="mailto:cyt3cb@virginia.edu">cyt3cb@virginia.edu</a></li>
-                            <li>Sammy Vinh - <a href="mailto:gak5ux@virginia.edu">gak5ux@virginia.edu</a></li>
+                            <li>Maddie Cahill - <a href="mailto:pcm8vy@virginia.edu">pcm8vy@virginia.edu</a></li>
                         </ul>
                     </Typography>
 
@@ -57,4 +56,4 @@ const Marketing = () => {
     )
 
 }
-export default Marketing
+export default PostGrad
