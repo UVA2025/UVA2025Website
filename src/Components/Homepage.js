@@ -43,7 +43,7 @@ const Homepage = () => {
                     sx={{
                         width: "100vw",
                         margin: "0",
-                        backgroundColor: "#26365A",
+                        backgroundColor: "#E57200",
                         padding: "40px 0px", // Top & Bottom = 40px, Left & Right = 0px
                         display: "flex",
                         justifyContent: "center",
