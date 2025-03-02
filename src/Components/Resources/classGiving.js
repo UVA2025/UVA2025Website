@@ -30,7 +30,7 @@ const ClassGiving = () => {
                         What does the Fourth Year Trustees Class Giving Committee do?
                     </Typography>
                     <Typography paragraph>
-                        The Class Giving Campaign is an annual tradition that empowers graduating students to support organizations that shaped our UVA experience. Your gift ensure future students enjoy the same opportunities we have during out four years at UVA
+                        The Class Giving Campaign is an annual tradition that empowers graduating students to support organizations that shaped our UVA experience. Your gift ensure future students enjoy the same opportunities we have during out four years at UVA. You can donate <a href="https://www.givecampus.com/schools/UniversityofVirginia/class-of-2025-campaign/?a=8987911#advocates" target="_blank">here</a>.
                     </Typography>
 
                     <Typography variant="h6" gutterBottom>
