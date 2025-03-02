@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import SYCBackgroundImage from '../images/TYC_Photo.jpeg';
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
+import { Button } from '@mui/material';
 
 const Homepage = () => {
     useEffect(() => {
@@ -30,11 +31,45 @@ const Homepage = () => {
                     >
                         <div style={{ textAlign: "center", color: "white" }}>
                             <Typography>
-                                <h1 style={{ marginTop: "5vh", marginBottom: "0", paddingRight: "12px",
-                                paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px" }}>FOURTH YEAR TRUSTEES</h1>
+                                <h1 style={{
+                                    marginTop: "5vh", marginBottom: "0", paddingRight: "12px",
+                                    paddingLeft: "12px", backgroundColor: "#26365A", display: "inline-block", borderRadius: "10px"
+                                }}>FOURTH YEAR TRUSTEES</h1>
                             </Typography>
                         </div>
                     </div>
+                </Grid>
+                <Grid item xs={12}
+                    sx={{
+                        width: "100vw",
+                        margin: "0",
+                        backgroundColor: "#26365A",
+                        padding: "40px 0px", // Top & Bottom = 40px, Left & Right = 0px
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        textAlign: "center",
+                        borderRadius: "0px",
+                    }}
+                >
+                    <Button
+                        variant="contained"
+                        href="https://www.givecampus.com/schools/UniversityofVirginia/class-of-2025-campaign/?a=8987911#advocates"
+                        target="_blank"
+                        sx={{
+                            backgroundColor: "white",
+                            color: "#26365A",
+                            fontSize: "24px",
+                            fontWeight: "bold",
+                            padding: "12px 24px",
+                            borderRadius: "10px",
+                            textTransform: "none",
+                            border: "2px solid #26365A",
+                            '&:hover': { backgroundColor: "#f0f0f0" }
+                        }}
+                    >
+                        MAKE YOUR CLASS GIFT HERE
+                    </Button>
                 </Grid>
                 <Grid item xs={1} sm={2} md={2}>
                 </Grid>
